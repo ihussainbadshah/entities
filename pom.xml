@@ -110,7 +110,6 @@
         <!--Checkstyle plugin properties -->
         <checkstyle.version>10.13.0</checkstyle.version>
         <license-tool-plugin.version>1.1.0</license-tool-plugin.version>
-        <!--  <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version> -->
         <maven.checkstyle.version>3.3.1</maven.checkstyle.version>
         <checkstyle.config.location>${project.basedir}/harman_checks.xml</checkstyle.config.location>
         <sonar.java.checkstyle.reportPaths>${project.build.directory}/checkstyle-result.xml</sonar.java.checkstyle.reportPaths>
@@ -477,30 +476,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- 
-             <plugin>
-                 <groupId>org.apache.maven.plugins</groupId>
-                 <artifactId>maven-gpg-plugin</artifactId>
-                 <version>${maven-gpg-plugin.version}</version>
-                 <configuration>
-                     <gpgArguments>
-                         <arg>--pinentry-mode</arg>
-                         <arg>loopback</arg>
-                         <arg>--batch</arg>
-                         <arg>--yes</arg>
-                     </gpgArguments>
-                 </configuration>
-                 <executions>
-                     <execution>
-                         <id>sign-artifacts</id>
-                         <phase>verify</phase>
-                         <goals>
-                             <goal>sign</goal>
-                         </goals>
-                     </execution>
-                 </executions>
-             </plugin>
-              -->
         </plugins>
     </build>
     <profiles>
