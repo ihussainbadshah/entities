@@ -37,25 +37,35 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.harman.ignite</groupId>
+    <groupId>org.eclipse.ecsp</groupId>
     <artifactId>entities</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>entities</name>
-    <description>Consists of entities</description>
-    <url>http://maven.apache.org</url>
+    <packaging>pom</packaging>
+    
+    <name>Entities</name>
+    <description>Set of entities for ECSP project</description>
+    <url>https://github.com/eclipse-ecsp/entities</url>
+    
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
     <scm>
         <connection>scm:git:https://github.com/eclipse-ecsp/entities.git</connection>
         <url>https://github.com/eclipse-ecsp/entities</url>
         <tag>HEAD</tag>
     </scm>
-
-    <licenses>
-        <license>
-            <name>Apache-2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
+    
+    <developers>
+        <developer>
+            <id>kaushalaroraharman</id>
+            <name>Kaushal Arora</name>
+            <email>kaushal.arora@harman.com</email>
+        </developer>
+    </developers>
 
     <issueManagement>
         <system>GitHub</system>
@@ -99,6 +109,8 @@
         </jacoco.ut.execution.data.file>
         <!--Checkstyle plugin properties -->
         <checkstyle.version>10.13.0</checkstyle.version>
+        <license-tool-plugin.version>1.1.0</license-tool-plugin.version>
+        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <maven.checkstyle.version>3.3.1</maven.checkstyle.version>
         <checkstyle.config.location>${project.basedir}/harman_checks.xml</checkstyle.config.location>
         <sonar.java.checkstyle.reportPaths>${project.build.directory}/checkstyle-result.xml</sonar.java.checkstyle.reportPaths>
@@ -115,6 +127,16 @@
 			<url>https://maven.pkg.github.com/eclipse-ecsp/entities</url>
 		</repository>
     </distributionManagement>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>dash-licenses-releases</id>
+            <url>https://repo.eclipse.org/content/repositories/dash-licenses-releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
   
     <dependencies>
         <dependency>
@@ -248,6 +270,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
     <build>
         <pluginManagement>
             <plugins>
@@ -434,6 +457,68 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+                <groupId>org.eclipse.dash</groupId>
+                <artifactId>license-tool-plugin</artifactId>
+                <version>${license-tool-plugin.version}</version>
+                <configuration>
+                    <includeScope>test</includeScope>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>license-check</id>
+                        <goals>
+                            <goal>license-check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-gpg-plugin</artifactId>
+                 <version>${maven-gpg-plugin.version}</version>
+                 <configuration>
+                     <gpgArguments>
+                         <arg>--pinentry-mode</arg>
+                         <arg>loopback</arg>
+                         <arg>--batch</arg>
+                         <arg>--yes</arg>
+                     </gpgArguments>
+                 </configuration>
+                 <executions>
+                     <execution>
+                         <id>sign-artifacts</id>
+                         <phase>verify</phase>
+                         <goals>
+                             <goal>sign</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>dash</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.eclipse.dash</groupId>
+                        <artifactId>license-tool-plugin</artifactId>
+                        <configuration>
+                            <skip>false</skip>
+                            <failWhenReviewNeeded>true</failWhenReviewNeeded>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <skipTests>true</skipTests>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
