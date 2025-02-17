@@ -51,7 +51,7 @@ jobs:
         with:
           add-paths: |
             DEPENDENCIES
-          token: ${{ secrets.REPO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: chore/update-DEPENDENCIES
           commit-message: "chore(dependencies): Update DEPENDENCIES"
           delete-branch: true
