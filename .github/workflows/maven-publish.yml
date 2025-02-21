@@ -50,17 +50,40 @@ jobs:
       sonar_configured: ${{ env.SONAR_CONFIGURED }}
 
 
-  sonarqube:
+  Analysis_with_sonar:
+    needs: [check_sonar_configured]
+    # No need to run if we cannot use the sonar token
+    if: >-
+      needs.check_sonar_configured.outputs.sonar_configured == 'true'
     runs-on: ubuntu-latest
     permissions:
+      contents: read
+      packages: write
       pull-requests: read
+
     steps:
-    - name: SonarQube Scan
-      uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of sonar analysis
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+          server-id: github
+          settings-path: ${{ github.workspace }}
+          
+      - name: Analyze with SonarCloud
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
           args:
             -Dsonar.projectKey=eclipse-ecsp_entities
             -Dsonar.organization=eclipse-ecsp
           projectBaseDir: .
+        run: |
+          mvn --update-snapshots verify \
+          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+          -Dsonar.projectKey=eclipse-ecsp_entities -Dsonar.organization=eclipse-ecsp \
+          -Dcheckstyle.skip -Dpmd.skip=true
