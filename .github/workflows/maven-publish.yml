@@ -77,11 +77,6 @@ jobs:
       - name: Analyze with SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args:
-            -Dsonar.projectKey=eclipse-ecsp_entities
-            -Dsonar.organization=eclipse-ecsp
-          projectBaseDir: .
         run: |
           mvn --update-snapshots verify \
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
