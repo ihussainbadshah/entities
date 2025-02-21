@@ -62,6 +62,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
           args:
-            -Dsonar.projectKey=eclipse-ecsp_utils
+            -Dsonar.projectKey=eclipse-ecsp_entities
             -Dsonar.organization=eclipse-ecsp
           projectBaseDir: .
