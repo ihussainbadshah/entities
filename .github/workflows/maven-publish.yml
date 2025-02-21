@@ -52,10 +52,9 @@ jobs:
 
   sonarqube:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     - name: SonarQube Scan
       uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
       env:
