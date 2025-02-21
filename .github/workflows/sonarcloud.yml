@@ -55,7 +55,7 @@ jobs:
           args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey=eclipse-ecsp_utils
+            -Dsonar.projectKey=eclipse-ecsp_entities
             -Dsonar.organization=eclipse-ecsp
             # Comma-separated paths to directories containing main source files.
             #-Dsonar.sources= # optional, default is project base directory
