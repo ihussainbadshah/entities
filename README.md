@@ -1,8 +1,8 @@
 [<img src="./images/logo.png" width="400" height="200"/>](./images/logo.png)
 
 # Entities
-[![Build](https://github.com/HARMAN-Automotive/entities/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/HARMAN-Automotive/entities/actions/workflows/maven-publish.yml)
-[![License Compliance](https://github.com/Harman-Automotive/entities/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/Harman-Automotive/entities/actions/workflows/license-compliance.yml)
+[![Build](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-publish.yml)
+[![License Compliance](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml)
 
 The `entities` project provides the following functionalities to a service. 
 
@@ -77,9 +77,9 @@ The `entities` project serves as a library for the services. It is not meant to 
 Add the following dependency in the target project
 ```
 <dependency>
-  <groupId>com.harman.ignite</groupId>
-  <artifactId>ignite-entities</artifactId>
-  <version>3.X.X</version>
+  <groupId>org.eclipse.ecsp</groupId>
+  <artifactId>entities</artifactId>
+  <version>1.X.X</version>
 </dependency>
 
 ```
@@ -294,10 +294,18 @@ Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for details on our code o
 
 ## Authors
 
-* **Kaushal Arora** - *Initial work* 
-* **Ashish Kumar Singh** - *Coding guidelines*
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+	  <td align="center" valign="top" width="14.28%"><a href="https://github.com/kaushalaroraharman"><img src="https://github.com/kaushalaroraharman.png" width="100px;" alt="Kaushal Arora"/><br /><sub><b>Kaushal Arora</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=kaushalaroraharman" title="Code and Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Akaushalaroraharman" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
 
-See also the list of [contributors](https://github.com/HARMAN-Automotive/entities/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/eclipse-ecsp/utils/graphs/contributors) who participated in this project.
 
 ## Security Contact Information
 
@@ -317,8 +325,8 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](./LICE
 
 ## Announcements
 
-All updates to this library are documented in our [Release notes](./release_notes.txt) and [releases](https://github.com/HARMAN-Automotive/entities/releases)
-For the versions available, see the [tags on this repository](https://github.com/HARMAN-Automotive/entities/tags).
+All updates to this library are documented in our [Release notes](./release_notes.txt) and [releases](https://github.com/eclipse-ecsp/entities/releases)
+For the versions available, see the [tags on this repository](https://github.com/eclipse-ecsp/entities/tags).
 
 
 
