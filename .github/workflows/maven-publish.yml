@@ -8,14 +8,17 @@ on:
     types: [created]
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
+      pull-requests: read
 
     steps:
     - uses: actions/checkout@v4
@@ -29,8 +32,45 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean -B package --file pom.xml
-
+      
     - name: Publish to GitHub Packages Apache Maven
       run: mvn -DskipTests=true deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+  check_sonar_configured:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check_sonar_configured
+        run: |
+          echo "Checking if sonar is configured: ${{ env.SONAR_CONFIGURED }}"
+    env:
+      SONAR_CONFIGURED: ${{ secrets.SONAR_TOKEN != '' }}
+    outputs:
+      sonar_configured: ${{ env.SONAR_CONFIGURED }}
+
+
+  Analysis_with_sonar:
+    needs: [check_sonar_configured]
+    # No need to run if we cannot use the sonar token
+    if: >-
+      needs.check_sonar_configured.outputs.sonar_configured == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Analyze with SonarCloud
+
+        # You can pin the exact commit or the version.
+        # uses: SonarSource/sonarcloud-github-action@v2.2.0
+        uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args:
+            -Dsonar.projectKey=eclipse-ecsp_entities
+            -Dsonar.organization=eclipse-ecsp
+          projectBaseDir: .
+        run: |
+          mvn --update-snapshots verify \
+          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+          -Dcheckstyle.skip -Dpmd.skip=true
