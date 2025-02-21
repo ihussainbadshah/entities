@@ -1,7 +1,6 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+# This workflow will build a package using Maven, run sonar scan on it, and publish it to GitHub packages when a release is created
 
-name: Maven Package
+name: Maven Package and Sonar Analysis
 
 on:
   release:
@@ -13,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -50,7 +49,7 @@ jobs:
       sonar_configured: ${{ env.SONAR_CONFIGURED }}
 
 
-  Analysis_with_sonar:
+  analysis_with_sonar_cloud:
     needs: [check_sonar_configured]
     # No need to run if we cannot use the sonar token
     if: >-
