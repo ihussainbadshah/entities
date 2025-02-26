@@ -138,15 +138,30 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     @JsonProperty(value = EventAttribute.PLATFORM_ID)
     private String platformId;
 
+    /**
+     * get value for timezone.
+     *
+     * @return short
+     */
     @Override
     public short getTimezone() {
         return timezone;
     }
 
+    /**
+     * set value for timezone.
+     *
+     * @param timezone : short
+     */
     public void setTimezone(short timezone) {
         this.timezone = timezone;
     }
 
+    /**
+     * get dffQualifier.
+     *
+     * @return String
+     */
     @JsonIgnore
     @Override
     public String getDFFQualifier() {
@@ -157,116 +172,238 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
      * Set the qualifier which will be used by DFFAgent to choose the right feed in case of
      * overlapping feed definitions for this same
      * event.
+     *
+     * @param qualifier : String
      */
     public void setDFFQualifier(String qualifier) {
         this.dffQualifier = qualifier;
     }
 
+    /**
+     * get deviceRoutable flag.
+     *
+     * @return boolean
+     */
     @Override
     @JsonIgnore
     public boolean isDeviceRoutable() {
         return this.deviceRoutable;
     }
 
+    /**
+     * set deviceRoutable flag.
+     *
+     * @param deviceRoutable : boolean
+     */
     public void setDeviceRoutable(boolean deviceRoutable) {
         this.deviceRoutable = deviceRoutable;
     }
 
+    /**
+     * get targetDeviceId.
+     *
+     * @return Optional of type String
+     */
     @Override
     @JsonIgnore
     public Optional<String> getTargetDeviceId() {
         return Optional.ofNullable(this.targetDeviceId);
     }
 
+    /**
+     * set targetDeviceId.
+     *
+     * @param targetDeviceId : String
+     */
     public void setTargetDeviceId(String targetDeviceId) {
         this.targetDeviceId = targetDeviceId;
     }
 
+    /**
+     * get value for messageId.
+     *
+     * @return String
+     */
     @Override
     public String getMessageId() {
         return this.messageId;
     }
 
+    /**
+     * set value for messageId.
+     *
+     * @param messageId : String
+     */
     public void setMessageId(String messageId) {
         this.messageId = messageId;
     }
 
+    /**
+     * get value for correlationId.
+     *
+     * @return String
+     */
     @Override
     public String getCorrelationId() {
         return this.correlationId;
     }
 
+    /**
+     * set value for correlationId.
+     *
+     * @param correlationId : String
+     */
     public void setCorrelationId(String correlationId) {
         this.correlationId = correlationId;
     }
 
+    /**
+     * get value for bizTransactionId.
+     *
+     * @return String
+     */
     @Override
     public String getBizTransactionId() {
         return this.bizTransactionId;
     }
 
+    /**
+     * set value for bizTransactionId.
+     *
+     * @param bizTransactionId : String
+     */
     public void setBizTransactionId(String bizTransactionId) {
         this.bizTransactionId = bizTransactionId;
     }
 
+    /**
+     * get if shoulder tap is enabled.
+     *
+     * @return boolean
+     */
     @JsonIgnore
     public boolean isShoulderTapEnabled() {
         return shoulderTapEnabled;
     }
 
+    /**
+     * set shoulder tap enabled or not.
+     *
+     * @param shoulderTapEnabled : boolean
+     */
     public void setShoulderTapEnabled(boolean shoulderTapEnabled) {
         this.shoulderTapEnabled = shoulderTapEnabled;
     }
 
+    /**
+     * get if transient data is present or not.
+     *
+     * @return boolean
+     */
     @JsonIgnore
     public boolean isTransientData() {
         return transientData;
     }
 
+    /**
+     * set transient data flag.
+     *
+     * @param transientData : boolean
+     */
     public void setTransientData(boolean transientData) {
         this.transientData = transientData;
     }
 
+    /**
+     * get if response expected is set to true or false.
+     *
+     * @return boolean
+     */
     @JsonIgnore
     public boolean isResponseExpected() {
         return responseExpected;
     }
 
+    /**
+     * set if response expected or not.
+     *
+     * @param responseExpected : boolean
+     */
     public void setResponseExpected(boolean responseExpected) {
         this.responseExpected = responseExpected;
     }
 
+    /**
+     * get deviceDeliveryCutoff.
+     *
+     * @return long
+     */
     public long getDeviceDeliveryCutoff() {
         return deviceDeliveryCutoff;
     }
 
+    /**
+     * set deviceDeliveryCutoff.
+     *
+     * @param deviceDeliveryCutoff : long
+     */
     public void setDeviceDeliveryCutoff(long deviceDeliveryCutoff) {
         this.deviceDeliveryCutoff = deviceDeliveryCutoff;
     }
 
+    /**
+     * Get value for device message topic suffix.
+     *
+     * @return Optional of type String
+     */
     @JsonIgnore
     public Optional<String> getDevMsgTopicSuffix() {
         return Optional.ofNullable(devMsgTopicSuffix);
     }
 
+    /**
+     * Set value for topic suffix.
+     *
+     * @param devMsgTopicSuffix : String
+     */
     public void setDevMsgTopicSuffix(String devMsgTopicSuffix) {
         this.devMsgTopicSuffix = devMsgTopicSuffix;
     }
 
+    /**
+     * Get value for device message topic prefix.
+     *
+     * @return Optional of type String
+     */
     @JsonIgnore
     public Optional<String> getDevMsgTopicPrefix() {
         return Optional.ofNullable(devMsgTopicPrefix);
     }
 
+    /**
+     * Set value for device message topic prefix.
+     *
+     * @param devMsgTopicPrefix : String
+     */
     public void setDevMsgTopicPrefix(String devMsgTopicPrefix) {
         this.devMsgTopicPrefix = devMsgTopicPrefix;
     }
 
+    /**
+     * get value for global topic name.
+     *
+     * @return Optional of type String
+     */
     @JsonIgnore
     public Optional<String> getDevMsgGlobalTopic() {
         return Optional.ofNullable(devMsgGlobalTopic);
     }
 
+    /**
+     * set global topic.
+     *
+     * @param devMsgGlobalTopic : String
+     */
     public void setDevMsgGlobalTopic(String devMsgGlobalTopic) {
         this.devMsgGlobalTopic = devMsgGlobalTopic;
     }
@@ -300,50 +437,105 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
         return userContextInfo;
     }
 
+    /**
+     * set userContextInfo.
+     *
+     * @param userContextInfo : List{@code <}UserContext{@code >}.
+     */
     public void setUserContextInfo(List<UserContext> userContextInfo) {
         this.userContextInfo = userContextInfo;
     }
 
+    /**
+     * get duplicateMessage flag.
+     *
+     * @return Boolean
+     */
     public Boolean isDuplicateMessage() {
         return duplicateMessage;
     }
 
+    /**
+     * set duplicateMessage flag.
+     *
+     * @param duplicateMessage : Boolean
+     */
     public void setDuplicateMessage(Boolean duplicateMessage) {
         this.duplicateMessage = duplicateMessage;
     }
 
+    /**
+     * get ecuType.
+     *
+     * @return String
+     */
     @Override
     public String getEcuType() {
         return this.ecuType;
     }
 
+    /**
+     * set ecuType.
+     *
+     * @param ecuType : String
+     */
     public void setEcuType(String ecuType) {
         this.ecuType = ecuType;
     }
 
+    /**
+     * get mqtt topic name.
+     *
+     * @return String
+     */
     @Override
     public String getMqttTopic() {
         return this.mqttTopic;
     }
 
+    /**
+     * set Mqtt topic name.
+     *
+     * @param mqttTopic : String
+     */
     public void setMqttTopic(String mqttTopic) {
         this.mqttTopic = mqttTopic;
     }
 
+    /**
+     * get platformId.
+     *
+     * @return String
+     */
     @Override
     public String getPlatformId() {
         return this.platformId;
     }
 
+    /**
+     * set platformId.
+     *
+     * @param platformId : String
+     */
     public void setPlatformId(String platformId) {
         this.platformId = platformId;
     }
 
+    /**
+     * get kafka headers.
+     *
+     * @return Map{@code <}String{@code >}{@code <}String{@code >}
+     */
     @Override
     public Map<String, String> getKafkaHeaders() {
         return kafkaHeaders;
     }
 
+    /**
+     * set kafka headers.
+     *
+     * @param kafkaHeaders : Map{@code <}String{@code >}{@code <}String{@code >}
+     */
     public void setKafkaHeaders(Map<String, String> kafkaHeaders) {
         this.kafkaHeaders = kafkaHeaders;
     }

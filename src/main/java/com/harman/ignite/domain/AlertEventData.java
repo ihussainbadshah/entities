@@ -46,13 +46,24 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode
 public abstract class AlertEventData extends AbstractEventData {
+    
     private static final long serialVersionUID = -9196480199577811807L;
     private String tripid;
 
+    /**
+     * get tripId.
+     *
+     * @return String
+     */
     public String getTripid() {
         return tripid;
     }
 
+    /**
+     * set tripId.
+     *
+     * @param tripid : String
+     */
     public void setTripid(String tripid) {
         this.tripid = tripid;
     }

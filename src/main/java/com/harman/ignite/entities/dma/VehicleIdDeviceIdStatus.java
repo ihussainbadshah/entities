@@ -47,7 +47,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * This class is almost a replica of VehicleIdDeviceIdMapping
  *          class with the change in the data structure of deviceIds. As per the
- *          RDNGs: 170506 & 170507, DMA should store the connection status
+ *          RDNGs: 170506 &amp; 170507, DMA should store the connection status
  *          of inactive devices too in its in-memory. Hence, in this class
  *          there is a map of deviceIds to connection status.
  *

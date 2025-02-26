@@ -45,14 +45,27 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode
 public abstract class AbstractSpeedEventData extends AbstractEventData {
 
+    /**
+     * version uid.
+     */
     private static final long serialVersionUID = 8671602711617275715L;
 
     private double value;
 
+    /**
+     * get value.
+     *
+     * @return double
+     */
     public double getValue() {
         return value;
     }
 
+    /**
+     * set value.
+     *
+     * @param value : double
+     */
     public void setValue(double value) {
         this.value = value;
     }

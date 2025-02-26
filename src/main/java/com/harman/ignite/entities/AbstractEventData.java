@@ -69,6 +69,11 @@ public abstract class AbstractEventData implements EventData, Serializable {
         return Optional.ofNullable(this.customExtension);
     }
 
+    /**
+     * Set the custom extension.
+     *
+     * @param customExtension : Object
+     */
     public void setCustomExtension(Object customExtension) {
         this.customExtension = customExtension;
     }

@@ -41,6 +41,11 @@ package com.harman.ignite.entities;
  */
 public interface ContextAwareEventData {
 
+    /**
+     * get user.
+     *
+     * @return String
+     */
     public String getUser();
 
 }

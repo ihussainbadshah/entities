@@ -47,6 +47,11 @@ import java.util.Optional;
  */
 public interface IgniteEvent extends IgniteEventBase {
 
+    /**
+     * get timezone.
+     *
+     * @return short
+     */
     public short getTimezone();
 
     /**
@@ -60,6 +65,8 @@ public interface IgniteEvent extends IgniteEventBase {
      * Get the qualifier which will be used by DFFAgent to choose the right
      * feed in case of overlapping feed definitions for this same
      * event.
+     *
+     * @return String
      */
     public String getDFFQualifier();
 
@@ -146,18 +153,43 @@ public interface IgniteEvent extends IgniteEventBase {
      * Optional. This is used to get user details associated to event.
      * </p>
      *
-     * @return {@Link List<UserContext> }
+     * @return list of UserContext
      */
     public List<UserContext> getUserContextInfo();
 
+    /**
+     * get duplicateMessage flag.
+     *
+     * @return Boolean
+     */
     public Boolean isDuplicateMessage();
 
+    /**
+     * get ecu type.
+     *
+     * @return String
+     */
     public String getEcuType();
 
+    /**
+     * get mqtt topic.
+     *
+     * @return String
+     */
     public String getMqttTopic();
 
+    /**
+     * get kafka headers.
+     *
+     * @return Map{@code <}String{@code >}{@code <}String{@code >}
+     */
     public Map<String, String> getKafkaHeaders();
 
+    /**
+     * get platformId.
+     *
+     * @return String
+     */
     public String getPlatformId();
 
 }

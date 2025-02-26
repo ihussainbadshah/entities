@@ -59,42 +59,92 @@ public class DataUsageEventDataV1_0 extends AbstractEventData {
     private String vehicleId;
     private String deviceId;
 
+    /**
+     * get eventName.
+     *
+     * @return String
+     */
     public String getEventName() {
         return eventName;
     }
 
+    /**
+     * set event name.
+     *
+     * @param eventName : String
+     */
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
 
+    /**
+     * get payload size.
+     *
+     * @return double
+     */
     public double getPayLoadSize() {
         return payLoadSize;
     }
 
+    /**
+     * set payload size.
+     *
+     * @param payLoadSize : double
+     */
     public void setPayLoadSize(double payLoadSize) {
         this.payLoadSize = payLoadSize;
     }
 
+    /**
+     * get timestamp.
+     *
+     * @return long
+     */
     public long getEventTimestamp() {
         return eventTimestamp;
     }
 
+    /**
+     * set timestamp.
+     *
+     * @param eventTimestamp : long
+     */
     public void setEventTimestamp(long eventTimestamp) {
         this.eventTimestamp = eventTimestamp;
     }
 
+    /**
+     * get vehicleId.
+     *
+     * @return String
+     */
     public String getVehicleId() {
         return vehicleId;
     }
 
+    /**
+     * set vehicleId.
+     *
+     * @param vehicleId : String
+     */
     public void setVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
     }
 
+    /**
+     * get deviceId.
+     *
+     * @return String
+     */
     public String getDeviceId() {
         return deviceId;
     }
 
+    /**
+     * set deviceId.
+     *
+     * @param deviceId : String
+     */
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
     }

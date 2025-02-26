@@ -45,7 +45,17 @@ import dev.morphia.annotations.Entity;
 @Entity
 public interface IgniteEntity {
 
+    /**
+     * Get the schema version.
+     *
+     * @return Version
+     */
     public Version getSchemaVersion();
 
+    /**
+     * Set schema version.
+     *
+     * @param version : Version
+     */
     public void setSchemaVersion(Version version);
 }

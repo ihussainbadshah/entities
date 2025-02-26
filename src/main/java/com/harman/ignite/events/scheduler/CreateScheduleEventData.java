@@ -84,7 +84,7 @@ public class CreateScheduleEventData extends AbstractEventData {
      * Ignite notification key. Mandatory. This has to be set by the service with the
      * IgniteKey that it receives from kafka topic.
      * <p>
-     * This is of type IgniteStringKey instead of IgniteKey<?>, to comply with Jackson's deserializer requirement.
+     * This is of type IgniteStringKey to comply with Jackson's deserializer requirement.
      * </p>
      */
     private IgniteStringKey notificationKey;
@@ -98,66 +98,146 @@ public class CreateScheduleEventData extends AbstractEventData {
     private String serviceName;
 
 
+    /**
+     * get recurrenceDelayMs.
+     *
+     * @return long
+     */
     public long getRecurrenceDelayMs() {
         return recurrenceDelayMs;
     }
 
+    /**
+     * set recurrenceDelayMs.
+     *
+     * @param recurrenceDelayMs : long
+     */
     public void setRecurrenceDelayMs(long recurrenceDelayMs) {
         this.recurrenceDelayMs = recurrenceDelayMs;
     }
 
+    /**
+     * get initialDelayMs.
+     *
+     * @return long
+     */
     public long getInitialDelayMs() {
         return initialDelayMs;
     }
 
+    /**
+     * set initialDelayMs.
+     *
+     * @param initialDelayMs : long
+     */
     public void setInitialDelayMs(long initialDelayMs) {
         this.initialDelayMs = initialDelayMs;
     }
 
+    /**
+     * get recurrenceType.
+     *
+     * @return RecurrenceType
+     */
     public RecurrenceType getRecurrenceType() {
         return recurrenceType;
     }
 
+    /**
+     * set recurrenceType.
+     *
+     * @param recurrenceType : RecurrenceType
+     */
     public void setRecurrenceType(RecurrenceType recurrenceType) {
         this.recurrenceType = recurrenceType;
     }
 
+    /**
+     * get firingCount.
+     *
+     * @return int
+     */
     public int getFiringCount() {
         return firingCount;
     }
 
+    /**
+     * get firingCount.
+     *
+     * @param firingCount : int
+     */
     public void setFiringCount(int firingCount) {
         this.firingCount = firingCount;
     }
 
+    /**
+     * get notificationPayload.
+     *
+     * @return byte[]
+     */
     public byte[] getNotificationPayload() {
         return notificationPayload;
     }
 
+    /**
+     * set notificationPayload.
+     *
+     * @param notificationPayload : byte[]
+     */
     public void setNotificationPayload(byte[] notificationPayload) {
         this.notificationPayload = notificationPayload;
     }
 
+    /**
+     * get notificationKey.
+     *
+     * @return IgniteStringKey
+     */
     public IgniteStringKey getNotificationKey() {
         return notificationKey;
     }
 
+    /**
+     * set notificationKey.
+     *
+     * @param notificationKey : IgniteStringKey
+     */
     public void setNotificationKey(IgniteStringKey notificationKey) {
         this.notificationKey = notificationKey;
     }
 
+    /**
+     * get notificationTopic.
+     *
+     * @return String
+     */
     public String getNotificationTopic() {
         return notificationTopic;
     }
 
+    /**
+     * set notificationTopic.
+     *
+     * @param notificationTopic : String
+     */
     public void setNotificationTopic(String notificationTopic) {
         this.notificationTopic = notificationTopic;
     }
 
+    /**
+     * get serviceName.
+     *
+     * @return String
+     */
     public String getServiceName() {
         return serviceName;
     }
 
+    /**
+     * set serviceName.
+     *
+     * @param serviceName : String
+     */
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
@@ -234,6 +314,33 @@ public class CreateScheduleEventData extends AbstractEventData {
      * </p>
      */
     public enum RecurrenceType {
-        YEARLY, MONTHLY, DAILY, HOURLY, EVERY_MINUTE, EVERY_SECOND, CUSTOM_MS;
+        /**
+         * Yearly.
+         */
+        YEARLY, 
+        /**
+         * Monthly.
+         */
+        MONTHLY, 
+        /**
+         * Daily.
+         */
+        DAILY, 
+        /**
+         * Hourly.
+         */
+        HOURLY, 
+        /**
+         * every minute.
+         */
+        EVERY_MINUTE, 
+        /**
+         * every second.
+         */
+        EVERY_SECOND, 
+        /**
+         * custom.
+         */
+        CUSTOM_MS;
     }
 }

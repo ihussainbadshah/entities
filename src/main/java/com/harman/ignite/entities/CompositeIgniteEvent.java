@@ -48,10 +48,20 @@ public class CompositeIgniteEvent extends AbstractIgniteEvent {
 
     private List<IgniteEvent> nestedEvents;
 
+    /**
+     * get nestedEvents.
+     *
+     * @return List{@code <}IgniteEvent{@code >}
+     */
     public List<IgniteEvent> getNestedEvents() {
         return this.nestedEvents;
     }
 
+    /**
+     * set nested events.
+     *
+     * @param nestedEvents : List{@code <}IgniteEvent{@code >}
+     */
     public void setNestedEvents(List<IgniteEvent> nestedEvents) {
         this.nestedEvents = nestedEvents;
     }

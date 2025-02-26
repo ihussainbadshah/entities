@@ -59,8 +59,18 @@ public interface IgniteEventBase extends IgniteEntity {
      */
     public String getEventId();
 
+    /**
+     * get version.
+     *
+     * @return Version
+     */
     public Version getVersion();
 
+    /**
+     * get timestamp.
+     *
+     * @return long
+     */
     public long getTimestamp();
 
     /**
@@ -90,7 +100,7 @@ public interface IgniteEventBase extends IgniteEntity {
     /**
      * vehicleId - unique identification of a vehicle.
      *
-     * @retrun vehicleId
+     * @return vehicleId
      */
     public String getVehicleId();
 

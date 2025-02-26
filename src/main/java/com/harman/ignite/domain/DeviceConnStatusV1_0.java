@@ -52,18 +52,38 @@ public class DeviceConnStatusV1_0 extends AbstractEventData {
     private String serviceName;
     private ConnectionStatus connStatus;
 
+    /**
+     * get service name.
+     *
+     * @return String
+     */
     public String getServiceName() {
         return serviceName;
     }
 
+    /**
+     * set service name.
+     *
+     * @param serviceName : String
+     */
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
 
+    /**
+     * get connection status.
+     *
+     * @return ConnectionStatus
+     */
     public ConnectionStatus getConnStatus() {
         return connStatus;
     }
 
+    /**
+     * set connection status.
+     *
+     * @param connStatus : ConnectionStatus
+     */
     public void setConnStatus(ConnectionStatus connStatus) {
         this.connStatus = connStatus;
     }
@@ -77,7 +97,13 @@ public class DeviceConnStatusV1_0 extends AbstractEventData {
      * The enum Connection status.
      */
     public enum ConnectionStatus {
+        /**
+         * Active.
+         */
         ACTIVE("ACTIVE"),
+        /**
+         * Inactive.
+         */
         INACTIVE("INACTIVE");
 
         private String connStatus;
@@ -86,6 +112,11 @@ public class DeviceConnStatusV1_0 extends AbstractEventData {
             this.connStatus = connStatus;
         }
 
+        /**
+         * get connection status.
+         *
+         * @return String
+         */
         public String getConnectionStatus() {
             return connStatus;
         }
