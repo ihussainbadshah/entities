@@ -2,7 +2,6 @@
 
 # Entities
 [![Build](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml)
-[![Sonar](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml)
 [![License Compliance](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml)
 [![Deployment](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-deploy.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-deploy.yml)
 
