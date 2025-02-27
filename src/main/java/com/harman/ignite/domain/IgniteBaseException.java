@@ -116,15 +116,30 @@ public class IgniteBaseException extends RuntimeException {
         this.serviceContext = serviceContext;
     }
 
+    /**
+     * get if exception is retryable.
+     *
+     * @return boolean
+     */
     public boolean isRetryable() {
         return isRetryable;
 
     }
 
+    /**
+     * get ignite event.
+     *
+     * @return IgniteEvent
+     */
     public IgniteEvent getIgniteEvent() {
         return igniteEvent;
     }
 
+    /**
+     * get service context.
+     *
+     * @return Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public Map<String, Object> getServiceContext() {
         return serviceContext;
     }

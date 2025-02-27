@@ -47,9 +47,24 @@ import java.util.Arrays;
 public abstract class AbstractBlobEventData extends AbstractEventData {
 
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -3736798123313255985L;
+    
+    /**
+     * encoding.
+     */
     private Encoding encoding;
+    
+    /**
+     * eventSource.
+     */
     private String eventSource;
+    
+    /**
+     * payload.
+     */
     private byte[] payload;
 
     /**

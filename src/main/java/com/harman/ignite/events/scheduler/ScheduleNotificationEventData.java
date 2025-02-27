@@ -70,6 +70,9 @@ public class ScheduleNotificationEventData extends AbstractEventData {
      */
     private byte[] payload;
 
+    /**
+     * Default constructor.
+     */
     public ScheduleNotificationEventData() {
         super();
     }
@@ -91,26 +94,56 @@ public class ScheduleNotificationEventData extends AbstractEventData {
         this.payload = payload;
     }
 
+    /**
+     * This method is a getter for scheduleid.
+     *
+     * @return String
+     */
     public String getScheduleIdId() {
         return scheduleId;
     }
 
+    /**
+     * This method is a setter for scheduleid.
+     *
+     * @param scheduleId : String
+     */
     public void setScheduleIdId(String scheduleId) {
         this.scheduleId = scheduleId;
     }
 
+    /**
+     * This method is a getter for triggertimems.
+     *
+     * @return long
+     */
     public long getTriggerTimeMs() {
         return triggerTimeMs;
     }
 
+    /**
+     * This method is a setter for triggertimems.
+     *
+     * @param triggerTimeMs : long
+     */
     public void setTriggerTimeMs(long triggerTimeMs) {
         this.triggerTimeMs = triggerTimeMs;
     }
 
+    /**
+     * This method is a getter for payload.
+     *
+     * @return byte
+     */
     public byte[] getPayload() {
         return payload;
     }
 
+    /**
+     * This method is a setter for payload.
+     *
+     * @param payload : byte
+     */
     public void setPayload(byte[] payload) {
         this.payload = payload;
     }

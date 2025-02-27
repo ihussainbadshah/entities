@@ -50,6 +50,9 @@ public abstract class AbstractSpeedEventData extends AbstractEventData {
      */
     private static final long serialVersionUID = 8671602711617275715L;
 
+    /**
+     * value.
+     */
     private double value;
 
     /**

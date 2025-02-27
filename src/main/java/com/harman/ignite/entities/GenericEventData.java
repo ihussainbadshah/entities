@@ -57,17 +57,39 @@ public class GenericEventData extends AbstractEventData {
      */
     private static final long serialVersionUID = -2149490530226401089L;
 
+    /**
+     * Data map.
+     */
     private Map<Object, Object> data = new HashMap<>();
 
+    /**
+     * get data.
+     *
+     * @return {@code <}Object{@code >}{@code <}Object{@code >}
+     */
     @JsonAnyGetter
     public Map<Object, Object> getData() {
         return data;
     }
 
+    /**
+     * get event data.
+     *
+     * @param key : Object
+     *
+     * @return Optional instance of Object
+     */
     public Optional<Object> getData(Object key) {
         return Optional.ofNullable(data.get(key));
     }
 
+    /**
+     * set key and value for event data.
+     *
+     * @param key : Object
+     *
+     * @param value : Object
+     */
     @JsonAnySetter
     public void set(Object key, Object value) {
         data.put(key, value);

@@ -51,14 +51,27 @@ public class Firing {
      */
     private long timeMs;
 
+    /**
+     * default constructor.
+     */
     public Firing() {
         super();
     }
 
+    /**
+     * Initialize with timeMs.
+     *
+     * @param timeMs : long
+     */
     public Firing(long timeMs) {
         this.timeMs = timeMs;
     }
 
+    /**
+     * get timeMs.
+     *
+     * @return long
+     */
     public long getTimeMs() {
         return timeMs;
     }

@@ -56,14 +56,17 @@ import java.util.List;
 @EventMapping(id = EventID.CREATE_SCHEDULE_EVENT, version = Version.V1_0)
 @EqualsAndHashCode
 public class CreateScheduleEventData extends AbstractEventData {
+    
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -3736798123313255986L;
     /**
      * Initial delay time in milli seconds for the first schedule. Mandatory.
      */
     private long initialDelayMs;
-    /*
+    /**
      * Recurrence type to be used to calculate the delay for recurring schedule.
-     * Default is CUSTOM_MS.
      */
     private RecurrenceType recurrenceType = RecurrenceType.CUSTOM_MS;
     /**

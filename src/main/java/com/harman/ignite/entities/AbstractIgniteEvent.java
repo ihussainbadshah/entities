@@ -63,43 +63,87 @@ import java.util.Optional;
 @JsonFilter(EventAttribute.EVENT_FILTER)
 public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implements IgniteEvent, Serializable {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -470373577484784015L;
 
+    /**
+     * timezone.
+     */
     @JsonProperty(value = EventAttribute.TIMEZONE, required = true)
     private short timezone;
 
+    /**
+     * dffQualifier.
+     */
     @JsonProperty(value = EventAttribute.DFF_QUALIFIER)
     private String dffQualifier;
 
+    /**
+     * deviceRoutable.
+     */
     @JsonIgnore
     private transient boolean deviceRoutable;
 
+    /**
+     * messageId.
+     */
     @JsonProperty(value = EventAttribute.MESSAGE_ID)
     private String messageId;
 
+    /**
+     * correlationId.
+     */
     @JsonProperty(value = EventAttribute.CORRELATION_ID)
     private String correlationId;
 
+    /**
+     * bizTransactionId.
+     */
     @JsonProperty(value = EventAttribute.BIZTRANSACTION_ID)
     private String bizTransactionId;
+    
+    /**
+     * benchMode.
+     */
     @JsonProperty(value = EventAttribute.BENCH_MODE)
     private String benchMode;
+    
+    /**
+     * shoulderTapEnabled.
+     */
     @JsonIgnore
     private transient boolean shoulderTapEnabled;
 
+    /**
+     * transientData.
+     */
     @JsonIgnore
     private transient boolean transientData;
 
+    /**
+     * responseExpected.
+     */
     @JsonIgnore
     private transient boolean responseExpected;
 
+    /**
+     * userContextInfo.
+     */
     @JsonProperty(value = EventAttribute.USER_CONTEXT)
     private List<UserContext> userContextInfo;
 
+    /**
+     * ecuType.
+     */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.ECU_TYPE)
     private String ecuType;
 
+    /**
+     * mqttTopic.
+     */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.MQTT_TOPIC)
     private String mqttTopic;
@@ -122,9 +166,15 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     @JsonIgnore
     private transient String devMsgGlobalTopic;
 
+    /**
+     * deviceDeliveryCutoff.
+     */
     @JsonProperty(value = EventAttribute.DEVICE_DELIVERY_CUTOFF)
     private long deviceDeliveryCutoff = Constants.DEFAULT_DELIVERY_CUTOFF;
 
+    /**
+     * duplicateMessage.
+     */
     @JsonProperty(value = EventAttribute.DUPLICATE_MESSAGE)
     private Boolean duplicateMessage;
 
@@ -134,6 +184,9 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     @JsonIgnore
     private transient Map<String, String> kafkaHeaders;
 
+    /**
+     * platformId.
+     */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.PLATFORM_ID)
     private String platformId;
@@ -158,7 +211,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     }
 
     /**
-     * get dffQualifier.
+     * This method is a getter for dffqualifier.
      *
      * @return String
      */

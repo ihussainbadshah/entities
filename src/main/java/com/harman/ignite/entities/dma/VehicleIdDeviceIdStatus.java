@@ -61,25 +61,50 @@ public class VehicleIdDeviceIdStatus extends AbstractIgniteEntity {
      */
     private Map<String, ConnectionStatus> deviceIdsToStatusMap;
 
+    /**
+     * Contructor.
+     */
     public VehicleIdDeviceIdStatus() {
         this.deviceIdsToStatusMap = new ConcurrentHashMap<>();
         setSchemaVersion(Version.V1_0);
     }
 
+    /**
+     * Constructor with version.
+     *
+     * @param schemaVersion : Version
+     */
     public VehicleIdDeviceIdStatus(Version schemaVersion) {
         this.deviceIdsToStatusMap = new ConcurrentHashMap<>();
         setSchemaVersion(schemaVersion);
     }
 
+    /**
+     * Constructor with version. and deviceIds.
+     *
+     * @param schemaVersion : Version
+     *
+     * @param deviceIdsToStatusMap : Map{@code <}String{@code >}{@code <}ConnectionStatus{@code >}
+     */
     public VehicleIdDeviceIdStatus(Version schemaVersion, Map<String, ConnectionStatus> deviceIdsToStatusMap) {
         setSchemaVersion(schemaVersion);
         this.deviceIdsToStatusMap = deviceIdsToStatusMap;
     }
 
+    /**
+     * get deviceIds.
+     *
+     * @return Map{@code <}String{@code >}{@code <}ConnectionStatus{@code >}
+     */
     public Map<String, ConnectionStatus> getDeviceIds() {
         return deviceIdsToStatusMap;
     }
 
+    /**
+     * set deviceIds.
+     *
+     * @param deviceIdsToStatusMap : Map{@code <}String{@code >}{@code <}ConnectionStatus{@code >}
+     */
     public void setDeviceIds(Map<String, ConnectionStatus> deviceIdsToStatusMap) {
         this.deviceIdsToStatusMap = deviceIdsToStatusMap;
     }
@@ -88,6 +113,8 @@ public class VehicleIdDeviceIdStatus extends AbstractIgniteEntity {
      * Add deviceId to the map of deviceIds to connectionStatus.
      *
      * @param deviceId : deviceId
+     *
+     * @param connectionStatus : String
      */
     public void addDeviceId(String deviceId, String connectionStatus) {
         deviceIdsToStatusMap.put(deviceId, ConnectionStatus.valueOf(connectionStatus));
@@ -96,8 +123,9 @@ public class VehicleIdDeviceIdStatus extends AbstractIgniteEntity {
     /**
      * Remove deviceId from the map of deviceIds to connectionStatus.
      *
-     * @param deviceId : deviceId
-     * @return : true/false
+     * @param deviceId : String
+     *
+     * @return : boolean
      */
     public boolean deleteDeviceId(String deviceId) {
         boolean deleted = false;

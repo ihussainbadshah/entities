@@ -8,23 +8,54 @@ import com.harman.ignite.entities.AbstractEventData;
  */
 @EventMapping(id = EventID.FETCH_CONN_STATUS, version = Version.V1_0)
 public class FetchConnectionStatusEventData extends AbstractEventData {
+    
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -818536456087837L;
 
+    /**
+     * vehicleId.
+     */
     private String vehicleId;
+    
+    /**
+     * platformId.
+     */
     private String platformId;
     
+    /**
+     * get vehicleId.
+     *
+     * @return String
+     */
     public String getVehicleId() {
         return vehicleId;
     }
 
+    /**
+     * set vehicleId.
+     *
+     * @param vehicleId : String
+     */
     public void setVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
     }
 
+    /**
+     * get platformId.
+     *
+     * @return String
+     */
     public String getPlatformId() {
         return platformId;
     }
 
+    /**
+     * set platformId.
+     *
+     * @param platformId : String
+     */
     public void setPlatformId(String platformId) {
         this.platformId = platformId;
     }

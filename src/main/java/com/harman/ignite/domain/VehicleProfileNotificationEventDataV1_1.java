@@ -54,8 +54,14 @@ import java.util.List;
 @EqualsAndHashCode
 public class VehicleProfileNotificationEventDataV1_1 extends AbstractEventData {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -339997586322190202L;
 
+    /**
+     * changeDescriptions.
+     */
     private List<ChangeDescription> changeDescriptions;
 
     /**
@@ -120,11 +126,29 @@ public class VehicleProfileNotificationEventDataV1_1 extends AbstractEventData {
      */
     public static class ChangeDescription implements Serializable {
         
+        /**
+         * uid.
+         */
         private static final long serialVersionUID = 2981313991985L;
 
+        /**
+         * key.
+         */
         private String key;
+        
+        /**
+         * path.
+         */
         private String path;
+        
+        /**
+         * old.
+         */
         private transient Object old;
+        
+        /**
+         * changed.
+         */
         private transient Object changed;
 
         /**

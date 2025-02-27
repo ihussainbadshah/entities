@@ -51,12 +51,34 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode
 public class DataUsageEventDataV1_0 extends AbstractEventData {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = 8980594756974242470L;
 
+    /**
+     * eventName.
+     */
     private String eventName;
+    
+    /**
+     * payLoadSize.
+     */
     private double payLoadSize;
+    
+    /**
+     * eventTimestamp.
+     */
     private long eventTimestamp;
+    
+    /**
+     * vehicleId.
+     */
     private String vehicleId;
+    
+    /**
+     * deviceId.
+     */
     private String deviceId;
 
     /**

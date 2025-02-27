@@ -48,8 +48,19 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode
 public class DeviceConnStatusV1_0 extends AbstractEventData {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -8185364560878375079L;
+    
+    /**
+     * serviceName.
+     */
     private String serviceName;
+    
+    /**
+     * connStatus.
+     */
     private ConnectionStatus connStatus;
 
     /**

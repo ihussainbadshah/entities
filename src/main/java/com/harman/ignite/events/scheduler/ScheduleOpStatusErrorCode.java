@@ -40,5 +40,12 @@ package com.harman.ignite.events.scheduler;
  * The enum Schedule op status error code.
  */
 public enum ScheduleOpStatusErrorCode {
-    INVALID_CREATE_SCHEDULE_MISSING_FIELDS, INVALID_DELETE_SCHEDULE_INVALID_SCHEDULE_ID;
+    /**
+     * INVALID_CREATE_SCHEDULE_MISSING_FIELDS.
+     */
+    INVALID_CREATE_SCHEDULE_MISSING_FIELDS, 
+    /**
+     * INVALID_DELETE_SCHEDULE_INVALID_SCHEDULE_ID.
+     */
+    INVALID_DELETE_SCHEDULE_INVALID_SCHEDULE_ID;
 }

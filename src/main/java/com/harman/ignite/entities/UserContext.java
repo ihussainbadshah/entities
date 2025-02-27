@@ -52,26 +52,55 @@ import java.io.Serializable;
 @Entity
 public class UserContext implements Serializable {
 
+    /**
+     * uid.
+     */
     protected static final long serialVersionUID = -3920038506977633922L;
 
+    /**
+     * userId.
+     */
     @JsonProperty(value = EventAttribute.USER_ID)
     protected String userId;
 
+    /**
+     * role.
+     */
     @JsonProperty(value = EventAttribute.USER_ROLE)
     protected String role;
 
+    /**
+     * get userId.
+     *
+     * @return String
+     */
     public String getUserId() {
         return userId;
     }
 
+    /**
+     * set userId.
+     *
+     * @param userId : String
+     */
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
+    /**
+     * get role.
+     *
+     * @return String
+     */
     public String getRole() {
         return role;
     }
 
+    /**
+     * set role.
+     *
+     * @param role : String
+     */
     public void setRole(String role) {
         this.role = role;
     }

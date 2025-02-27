@@ -46,6 +46,9 @@ import java.util.List;
  */
 public class CompositeIgniteEvent extends AbstractIgniteEvent {
 
+    /**
+     * nestedEvents.
+     */
     private List<IgniteEvent> nestedEvents;
 
     /**

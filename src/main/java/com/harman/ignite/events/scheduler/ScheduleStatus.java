@@ -42,5 +42,12 @@ package com.harman.ignite.events.scheduler;
  * @author VKanchepalli
  */
 public enum ScheduleStatus {
-    CREATE, DELETE
+    /**
+     * CREATE.
+     */
+    CREATE, 
+    /**
+     * DELETE.
+     */
+    DELETE
 }

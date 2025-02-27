@@ -46,35 +46,73 @@ import com.harman.ignite.domain.EventAttribute;
  */
 public class IgniteDeviceAwareBlobEvent extends IgniteBlobEvent implements IgniteDeviceAware {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -3920038506977633926L;
+    
+    /**
+     * ecuType.
+     */
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.ECU_TYPE)
     private String ecuType;
+    
+    /**
+     * mqttTopic.
+     */
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.MQTT_TOPIC)
     private String mqttTopic;
 
+    /**
+     * Initialize with ecuType and mqttTopic.
+     *
+     * @param ecuType : String
+     *
+     * @param mqttTopic : String
+     */
     public IgniteDeviceAwareBlobEvent(String ecuType, String mqttTopic) {
         this.ecuType = ecuType;
         this.mqttTopic = mqttTopic;
     }
 
+    /**
+     * get ecuType.
+     *
+     * @return String
+     */
     @Override
     public String getEcuType() {
         return ecuType;
     }
 
+    /**
+     * set ecuType.
+     *
+     * @param ecuType : String
+     */
     public void setEcuType(String ecuType) {
         this.ecuType = ecuType;
     }
 
+    /**
+     * get mqttTopic.
+     *
+     * @return String
+     */
     @Override
     public String getMqttTopic() {
         return mqttTopic;
     }
 
+    /**
+     * set mqttTopic.
+     *
+     * @param mqttTopic : String
+     */
     public void setMqttTopic(String mqttTopic) {
         this.mqttTopic = mqttTopic;
     }

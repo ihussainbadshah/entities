@@ -53,6 +53,10 @@ public class AcknowledgementV1_0 extends AbstractEventData {
      * version uid.
      */
     private static final long serialVersionUID = -6745785116371883005L;
+    
+    /**
+     * status.
+     */
     private Status status;
 
     /**

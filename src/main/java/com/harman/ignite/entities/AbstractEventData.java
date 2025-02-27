@@ -52,8 +52,14 @@ import java.util.Optional;
 
 public abstract class AbstractEventData implements EventData, Serializable {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -207501751223603791L;
-    // used to set custom data, (eg: specific to customer)
+    
+    /**
+     * customExtension.
+     */
     @JsonProperty(value = EventAttribute.CUSTOM_EXTENSION)
     private Object customExtension;
 

@@ -43,6 +43,11 @@ import java.util.Map;
 
 public interface IgniteData<K, V> {
 
+    /**
+     * get global processing context.
+     *
+     * @return Map
+     */
     public Map<K, V> getGlobalProcessingContext();
 
 }
