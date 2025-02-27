@@ -51,6 +51,19 @@ jobs:
         name: "Import GPG Key"
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          
+      - name: Configure Maven settings
+        run: |
+          mkdir -p $HOME/.m2
+          echo "<settings xmlns='http://maven.apache.org/SETTINGS/1.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd'>
+            <servers>
+              <server>
+                <id>ossrh</id>
+                <username>${{ secrets.OSSRH_USERNAME }}</username>
+                <password>${{ secrets.OSSRH_PASSWORD }}</password>
+              </server>
+            </servers>
+          </settings>" > $HOME/.m2/settings.xml
 
       - name: Copy License information
         run: |
@@ -60,4 +73,4 @@ jobs:
       - name: Publish version
         run: |-
           VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          mvn clean deploy -s $GITHUB_WORKSPACE/settings.xml -Dgpg.passphrase="${{ secrets.GPG_PASSPHRASE }}" -Prelease -Drevision=$VERSION
+          mvn clean deploy -s $HOME/.m2/settings.xml -Dgpg.passphrase="${{ secrets.GPG_PASSPHRASE }}" -Prelease -Drevision=$VERSION
