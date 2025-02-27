@@ -1,8 +1,10 @@
 [<img src="./images/logo.png" width="400" height="200"/>](./images/logo.png)
 
 # Entities
-[![Build](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-publish.yml)
+[![Build](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml)
+[![Sonar](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-build.yml)
 [![License Compliance](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/license-compliance.yml)
+[![Deployment](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-deploy.yml/badge.svg)](https://github.com/eclipse-ecsp/entities/actions/workflows/maven-deploy.yml)
 
 The `entities` project provides the following functionalities to a service. 
 
