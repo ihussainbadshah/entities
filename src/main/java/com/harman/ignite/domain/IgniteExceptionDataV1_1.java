@@ -74,38 +74,81 @@ public class IgniteExceptionDataV1_1 extends AbstractIgniteExceptionData {
      */
     private transient Map<String, Object> context;
 
+    /**
+     * Default constructor.
+     */
     public IgniteExceptionDataV1_1() {
         super();
     }
 
+    /**
+     * This method is a getter for processorname.
+     *
+     * @return String
+     */
     public String getProcessorName() {
         return processorName;
     }
 
+    /**
+     * This method is a setter for processorname.
+     *
+     * @param processorName : String
+     */
     public void setProcessorName(String processorName) {
         this.processorName = processorName;
     }
 
+    /**
+     * This method is a getter for retrycount.
+     *
+     * @return int
+     */
     public int getRetryCount() {
         return retryCount;
     }
 
+    /**
+     * This method is a setter for retrycount.
+     *
+     * @param retryCount : int
+     */
     public void setRetryCount(int retryCount) {
         this.retryCount = retryCount;
     }
 
+    /**
+     * This method is a getter for nesteddlqexceptiondata.
+     *
+     * @return NestedDLQExceptionData
+     */
     public NestedDLQExceptionData getNestedDLQExceptionData() {
         return nestedDLQExceptionData;
     }
 
+    /**
+     * This method is a setter for nesteddlqexceptiondata.
+     *
+     * @param nestedDLQExceptionData : NestedDLQExceptionData
+     */
     public void setNestedDLQExceptionData(NestedDLQExceptionData nestedDLQExceptionData) {
         this.nestedDLQExceptionData = nestedDLQExceptionData;
     }
 
+    /**
+     * This method is a getter for context.
+     *
+     * @return Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public Map<String, Object> getContext() {
         return context;
     }
 
+    /**
+     * This method is a setter for context.
+     *
+     * @param context : Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public void setContext(Map<String, Object> context) {
         this.context = context;
     }

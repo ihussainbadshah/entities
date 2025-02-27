@@ -69,6 +69,9 @@ public class DeviceMessage extends AbstractIgniteEntity {
 
     private boolean isOtherBrokerConfigured = false;
 
+    /**
+     * default constructor.
+     */
     public DeviceMessage() {
     }
 
@@ -97,26 +100,56 @@ public class DeviceMessage extends AbstractIgniteEntity {
         populateDeviceMessageHeader();
     }
 
+    /**
+     * get message.
+     *
+     * @return byte[]
+     */
     public byte[] getMessage() {
         return message;
     }
 
+    /**
+     * set message.
+     *
+     * @param message : byte[]
+     */
     public void setMessage(byte[] message) {
         this.message = message;
     }
 
+    /**
+     * get headers.
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader getDeviceMessageHeader() {
         return deviceMessageHeader;
     }
 
+    /**
+     * set headers.
+     *
+     * @param deviceMessageHeader : DeviceMessageHeader
+     */
     public void setDeviceMessageHeader(DeviceMessageHeader deviceMessageHeader) {
         this.deviceMessageHeader = deviceMessageHeader;
     }
 
+    /**
+     * get if other broker configured.
+     *
+     * @param isOtherBrokerConfigured : boolean
+     */
     public void isOtherBrokerConfigured(boolean isOtherBrokerConfigured) {
         this.isOtherBrokerConfigured = isOtherBrokerConfigured;
     }
 
+    /**
+     * set if other broker configured.
+     *
+     * @return boolean
+     */
     public boolean isOtherBrokerConfigured() {
         return this.isOtherBrokerConfigured;
     }
@@ -146,26 +179,56 @@ public class DeviceMessage extends AbstractIgniteEntity {
         deviceMessageHeader.withTargetDeviceId(event.getTargetDeviceId().orElse(event.getSourceDeviceId()));
     }
 
+    /**
+     * get feedback topic.
+     *
+     * @return String
+     */
     public String getFeedBackTopic() {
         return feedBackTopic;
     }
 
+    /**
+     * set feedback topic.
+     *
+     * @param feedBackTopic : String
+     */
     public void setFeedBackTopic(String feedBackTopic) {
         this.feedBackTopic = feedBackTopic;
     }
 
+    /**
+     * get eventLevelRetryInterval.
+     *
+     * @return long
+     */
     public long getEventLevelRetryInterval() {
         return eventLevelRetryInterval;
     }
 
+    /**
+     * set eventLevelRetryInterval.
+     *
+     * @param eventLevelRetryInterval : long
+     */
     public void setEventLevelRetryInterval(long eventLevelRetryInterval) {
         this.eventLevelRetryInterval = eventLevelRetryInterval;
     }
 
+    /**
+     * get event.
+     *
+     * @return IgniteEventImpl
+     */
     public IgniteEventImpl getEvent() {
         return event;
     }
 
+    /**
+     * set event.
+     *
+     * @param event : IgniteEventImpl
+     */
     public void setEvent(IgniteEventImpl event) {
         this.event = event;
     }

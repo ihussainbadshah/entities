@@ -49,16 +49,35 @@ import java.util.Map;
  * @author avadakkootko
  */
 public class RetryRecord extends AbstractIgniteEntity {
+    
+    /**
+     * ignitkey.
+     */
     private IgniteKey<?> igniteKey;
 
+    /**
+     * deviceMessage.
+     */
     private DeviceMessage deviceMessage;
 
+    /**
+     * attempts.
+     */
     private int attempts;
 
+    /**
+     * lastRetryTimestamp.
+     */
     private long lastRetryTimestamp;
 
+    /**
+     * extraParameters.
+     */
     private Map<String, Object> extraParameters;
 
+    /**
+     * Default constructor.
+     */
     public RetryRecord() {
     }
 
@@ -80,47 +99,102 @@ public class RetryRecord extends AbstractIgniteEntity {
         attempts = 0;
     }
 
+    /**
+     * This method is a getter for ignitekey.
+     *
+     * @return IgniteKey
+     */
     public IgniteKey<?> getIgniteKey() {
         return igniteKey;
     }
 
+    /**
+     * This method is a setter for ignitekey.
+     *
+     * @param igniteKey : IgniteKey{@code <}?{@code >}
+     */
     public void setIgniteKey(IgniteKey<?> igniteKey) {
         this.igniteKey = igniteKey;
     }
 
+    /**
+     * This method is a getter for devicemessage.
+     *
+     * @return DeviceMessage
+     */
     public DeviceMessage getDeviceMessage() {
         return deviceMessage;
     }
 
+    /**
+     * This method is a setter for devicemessage.
+     *
+     * @param deviceMessage : DeviceMessage
+     */
     public void setDeviceMessage(DeviceMessage deviceMessage) {
         this.deviceMessage = deviceMessage;
     }
 
+    /**
+     * This method is a getter for attempts.
+     *
+     * @return int
+     */
     public int getAttempts() {
         return attempts;
     }
 
+    /**
+     * This method is a setter for attempts.
+     *
+     * @param attempts : int
+     */
     public void setAttempts(int attempts) {
         this.attempts = attempts;
     }
 
+    /**
+     * This method is a getter for lastretrytimestamp.
+     *
+     * @return long
+     */
     public long getLastRetryTimestamp() {
         return lastRetryTimestamp;
     }
 
+    /**
+     * This method is a setter for lastretrytimestamp.
+     *
+     * @param lastRetryTimestamp : long
+     */
     public void setLastRetryTimestamp(long lastRetryTimestamp) {
         this.lastRetryTimestamp = lastRetryTimestamp;
     }
 
+    /**
+     * This method is to add lastRetryTimestamp.
+     *
+     * @param lastRetryTimestamp : long
+     */
     public void addAttempt(long lastRetryTimestamp) {
         attempts++;
         this.lastRetryTimestamp = lastRetryTimestamp;
     }
 
+    /**
+     * This method is a getter for extraparameters.
+     *
+     * @return Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public Map<String, Object> getExtraParameters() {
         return extraParameters;
     }
 
+    /**
+     * This method is a setter for extraparameters.
+     *
+     * @param extraParameters : Map{@code <}String{@code >}{@code <}String{@code >}
+     */
     public void setExtraParameters(Map<String, Object> extraParameters) {
         this.extraParameters = extraParameters;
     }

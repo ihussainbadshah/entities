@@ -121,6 +121,9 @@ public class ScheduleEntry extends AbstractIgniteEntity {
      */
     private long lastMissedFiringNotificationDts;
 
+    /**
+     * Default constructor.
+     */
     public ScheduleEntry() {
         super();
     }
@@ -151,20 +154,30 @@ public class ScheduleEntry extends AbstractIgniteEntity {
         this.taskId = taskId;
     }
 
+    /**
+     * This method is a getter for scheduleid.
+     *
+     * @return String
+     */
     public String getScheduleId() {
         return scheduleId;
     }
 
+    /**
+     * This method is a setter for scheduleid.
+     *
+     * @param scheduleId : String
+     */
     public void setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
     }
 
     /**
-     * Sets schedule id .
+     * This method is a setter for scheduleid.
      *
-     * @param id
-     *         the id
-     * @return the schedule id
+     * @param id : String
+     *
+     * @return ScheduleEntry
      */
     public ScheduleEntry setScheduleIdId(String id) {
         this.scheduleId = id;
@@ -172,85 +185,188 @@ public class ScheduleEntry extends AbstractIgniteEntity {
 
     }
 
+    /**
+     * This method is a getter for vehicleid.
+     *
+     * @return String
+     */
     public String getVehicleId() {
         return vehicleId;
     }
 
+    /**
+     * This method is a setter for vehicleid.
+     *
+     * @param vehicleId : String
+     */
     public void setVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
     }
 
+    /**
+     * This method is a getter for event.
+     *
+     * @return IgniteEvent
+     */
     public IgniteEvent getEvent() {
         return event;
     }
 
+    /**
+     * This method is a setter for event.
+     *
+     * @param event : IgniteEvent
+     */
     public void setEvent(IgniteEvent event) {
         this.event = event;
     }
 
+    /**
+     * This method is a getter for firedcount.
+     *
+     * @return int
+     */
     public int getFiredCount() {
         return firedCount;
     }
 
+    /**
+     * This method is a setter for firedcount.
+     *
+     * @param firedCount : int
+     * @return ScheduleEntry
+     */
     public ScheduleEntry setFiredCount(int firedCount) {
         this.firedCount = firedCount;
         return this;
     }
 
+    /**
+     * This method is a getter for createdts.
+     *
+     * @return long
+     */
     public long getCreateDts() {
         return createDts;
     }
 
+    /**
+     * This method is a setter for createdts.
+     *
+     * @param createDts : long
+     * @return ScheduleEntry
+     */
     public ScheduleEntry setCreateDts(long createDts) {
         this.createDts = createDts;
         return this;
     }
 
+    /**
+     * This method is a getter for updatedts.
+     *
+     * @return long
+     */
     public long getUpdateDts() {
         return updateDts;
     }
 
+    /**
+     * This method is a setter for updatedts.
+     *
+     * @param updateDts : long
+     * @return ScheduleEntry
+     */
     public ScheduleEntry setUpdateDts(long updateDts) {
         this.updateDts = updateDts;
         return this;
     }
 
+    /**
+     * This method is a getter for deletedts.
+     *
+     * @return long
+     */
     public long getDeleteDts() {
         return deleteDts;
     }
 
+    /**
+     * This method is a setter for deletedts.
+     *
+     * @param deleteDts : long
+     */
     public void setDeleteDts(long deleteDts) {
         this.deleteDts = deleteDts;
     }
 
+    /**
+     * This method is a getter for firings.
+     *
+     * @return List
+     */
     public List<Firing> getFirings() {
         return firings;
     }
 
+    /**
+     * This method is a setter for firings.
+     *
+     * @param firings : List
+     */
     public void setFirings(List<Firing> firings) {
         this.firings = firings;
     }
 
+    /**
+     * get delete status flag.
+     *
+     * @return boolean
+     */
     public boolean isDeleteStatus() {
         return deleteStatus;
     }
 
+    /**
+     * This method is a setter for deletestatus.
+     *
+     * @param deleteStatus : boolean
+     */
     public void setDeleteStatus(boolean deleteStatus) {
         this.deleteStatus = deleteStatus;
     }
 
+    /**
+     * This method is a getter for taskid.
+     *
+     * @return String
+     */
     public String getTaskId() {
         return taskId;
     }
 
+    /**
+     * This method is a setter for taskid.
+     *
+     * @param taskId : String
+     */
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
 
+    /**
+     * This method is a getter for lastmissedfiringnotificationdts.
+     *
+     * @return long
+     */
     public long getLastMissedFiringNotificationDts() {
         return lastMissedFiringNotificationDts;
     }
 
+    /**
+     * This method is a setter for lastmissedfiringnotificationdts.
+     *
+     * @param lastMissedFiringNotificationDts : long
+     */
     public void setLastMissedFiringNotificationDts(long lastMissedFiringNotificationDts) {
         this.lastMissedFiringNotificationDts = lastMissedFiringNotificationDts;
     }

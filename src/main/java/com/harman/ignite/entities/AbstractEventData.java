@@ -52,8 +52,14 @@ import java.util.Optional;
 
 public abstract class AbstractEventData implements EventData, Serializable {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -207501751223603791L;
-    // used to set custom data, (eg: specific to customer)
+    
+    /**
+     * customExtension.
+     */
     @JsonProperty(value = EventAttribute.CUSTOM_EXTENSION)
     private Object customExtension;
 
@@ -69,6 +75,11 @@ public abstract class AbstractEventData implements EventData, Serializable {
         return Optional.ofNullable(this.customExtension);
     }
 
+    /**
+     * Set the custom extension.
+     *
+     * @param customExtension : Object
+     */
     public void setCustomExtension(Object customExtension) {
         this.customExtension = customExtension;
     }

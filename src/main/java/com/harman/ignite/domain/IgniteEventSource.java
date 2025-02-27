@@ -9,8 +9,12 @@ package com.harman.ignite.domain;
  * @author avadakkootko
  */
 public class IgniteEventSource {
+    
     private IgniteEventSource() {
     }
 
+    /**
+     * Ignite string representation.
+     */
     public static final String IGNITE = "ignite";
 }

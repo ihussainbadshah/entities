@@ -47,5 +47,10 @@ import dev.morphia.annotations.Entity;
 @Entity
 public interface IgniteKey<V> {
 
+    /**
+     * get key.
+     *
+     * @return {@code <}V{@code >}
+     */
     public V getKey();
 }

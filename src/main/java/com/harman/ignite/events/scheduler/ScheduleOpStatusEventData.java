@@ -81,6 +81,9 @@ public class ScheduleOpStatusEventData extends AbstractEventData {
      */
     private ScheduleOpStatusErrorCode statusErrorCode;
 
+    /**
+     * Default constructor.
+     */
     public ScheduleOpStatusEventData() {
         super();
     }
@@ -106,42 +109,92 @@ public class ScheduleOpStatusEventData extends AbstractEventData {
         this.valid = valid;
     }
 
+    /**
+     * This method is a getter for scheduleid.
+     *
+     * @return String
+     */
     public String getScheduleId() {
         return scheduleId;
     }
 
+    /**
+     * This method is a setter for scheduleid.
+     *
+     * @param scheduleId : String
+     */
     public void setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
     }
 
+    /**
+     * This method is a getter for status.
+     *
+     * @return ScheduleStatus
+     */
     public ScheduleStatus getStatus() {
         return status;
     }
 
+    /**
+     * This method is a setter for status.
+     *
+     * @param status : ScheduleStatus
+     */
     public void setStatus(ScheduleStatus status) {
         this.status = status;
     }
 
+    /**
+     * This method is a getter for igniteevent.
+     *
+     * @return IgniteEventImpl
+     */
     public IgniteEventImpl getIgniteEvent() {
         return igniteEvent;
     }
 
+    /**
+     * This method is a setter for igniteevent.
+     *
+     * @param igniteEvent : IgniteEventImpl
+     */
     public void setIgniteEvent(IgniteEventImpl igniteEvent) {
         this.igniteEvent = igniteEvent;
     }
 
+    /**
+     * get if event data is valid.
+     *
+     * @return boolean
+     */
     public boolean isValid() {
         return valid;
     }
 
+    /**
+     * This method is a setter for valid.
+     *
+     * @param valid : boolean
+     */
     public void setValid(boolean valid) {
         this.valid = valid;
     }
 
+    /**
+     * This method is a getter for statuserrorcode.
+     *
+     * @return ScheduleOpStatusErrorCode
+     */
     public ScheduleOpStatusErrorCode getStatusErrorCode() {
         return statusErrorCode;
     }
 
+    /**
+     * This method is a setter for statuserrorcode.
+     *
+     * @param statusErrorCode : ScheduleOpStatusErrorCode
+     */
     public void setStatusErrorCode(ScheduleOpStatusErrorCode statusErrorCode) {
         this.statusErrorCode = statusErrorCode;
     }
@@ -157,9 +210,21 @@ public class ScheduleOpStatusEventData extends AbstractEventData {
      * The enum Schedule op status error code.
      */
     public enum ScheduleOpStatusErrorCode {
+        /**
+         * INVALID_CREATE_SCHEDULE_MISSING_FIELDS.
+         */
         INVALID_CREATE_SCHEDULE_MISSING_FIELDS,
+        /**
+         * INVALID_DELETE_SCHEDULE_INVALID_SCHEDULE_ID.
+         */
         INVALID_DELETE_SCHEDULE_INVALID_SCHEDULE_ID,
+        /**
+         * EXPIRED_SCHEDULE.
+         */
         EXPIRED_SCHEDULE,
+        /**
+         * MISSED_SCHEDULE_FIRINGS.
+         */
         MISSED_SCHEDULE_FIRINGS;
     }
 }

@@ -45,8 +45,18 @@ import java.time.LocalDateTime;
  **/
 public interface AuditableIgniteEntity {
 
+    /**
+     * Get last updated time.
+     *
+     * @return LocalDateTime
+     */
     public LocalDateTime getLastUpdatedTime();
 
+    /**
+     * Set last updated time.
+     *
+     * @param lastUpdatedTime : LocalDateTime
+     */
     public void setLastUpdatedTime(LocalDateTime lastUpdatedTime);
 
 }

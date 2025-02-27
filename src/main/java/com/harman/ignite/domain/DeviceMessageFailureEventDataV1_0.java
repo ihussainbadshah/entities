@@ -54,58 +54,146 @@ import lombok.EqualsAndHashCode;
 @EventMapping(id = EventID.DEVICEMESSAGEFAILURE, version = Version.V1_0)
 @EqualsAndHashCode
 public class DeviceMessageFailureEventDataV1_0 extends AbstractEventData {
+    
+    /**
+     * serialVersionUID.
+     */
     private static final long serialVersionUID = -1147106467326210246L;
+    
+    /**
+     * failedIgniteEvent.
+     */
     private IgniteEventImpl failedIgniteEvent;
+    
+    /**
+     * retryAttempts.
+     */
     private int retryAttempts;
+    
+    /**
+     * shoudlerTapRetryAttempts.
+     */
     private int shoudlerTapRetryAttempts;
+    
+    /**
+     * deviceDeliveryCutoffExceeded.
+     */
     private boolean deviceDeliveryCutoffExceeded;
+    
+    /**
+     * deviceStatusInactive.
+     */
     private boolean deviceStatusInactive;
+    
+    /**
+     * errorCode.
+     */
     private DeviceMessageErrorCode errorCode;
 
+    /**
+     * get failedIgniteEvent.
+     *
+     * @return IgniteEvent
+     */
     public IgniteEvent getFailedIgniteEvent() {
         return failedIgniteEvent;
     }
 
+    /**
+     * set failedIgniteEvent.
+     *
+     * @param failedIgniteEvent : IgniteEventImpl
+     */
     public void setFailedIgniteEvent(IgniteEventImpl failedIgniteEvent) {
         this.failedIgniteEvent = failedIgniteEvent;
     }
 
+    /**
+     * get retryAttempts.
+     *
+     * @return int
+     */
     public int getRetryAttempts() {
         return retryAttempts;
     }
 
+    /**
+     * set retryAttempts.
+     *
+     * @param retryAttempts : int
+     */
     public void setRetryAttempts(int retryAttempts) {
         this.retryAttempts = retryAttempts;
     }
-
+    
+    /**
+     * get shoudlerTapRetryAttempts.
+     *
+     * @return int
+     */
     public int getShoudlerTapRetryAttempts() {
         return shoudlerTapRetryAttempts;
     }
 
+    /**
+     * set shoudlerTapRetryAttempts.
+     *
+     * @param shoudlerTapRetryAttempts : int
+     */
     public void setShoudlerTapRetryAttempts(int shoudlerTapRetryAttempts) {
         this.shoudlerTapRetryAttempts = shoudlerTapRetryAttempts;
     }
 
+    /**
+     * get deviceDeliveryCutoffExceeded.
+     *
+     * @return boolean
+     */
     public boolean isDeviceDeliveryCutoffExceeded() {
         return deviceDeliveryCutoffExceeded;
     }
 
+    /**
+     * set deviceDeliveryCutoffExceeded.
+     *
+     * @param deviceDeliveryCutoffExceeded : boolean
+     */
     public void setDeviceDeliveryCutoffExceeded(boolean deviceDeliveryCutoffExceeded) {
         this.deviceDeliveryCutoffExceeded = deviceDeliveryCutoffExceeded;
     }
 
+    /**
+     * get deviceStatusInactive.
+     *
+     * @return boolean
+     */
     public boolean isDeviceStatusInactive() {
         return deviceStatusInactive;
     }
 
+    /**
+     * set deviceStatusInactive.
+     *
+     * @param deviceStatusInactive : boolean
+     */
     public void setDeviceStatusInactive(boolean deviceStatusInactive) {
         this.deviceStatusInactive = deviceStatusInactive;
     }
 
+    /**
+     * get errorCode.
+     *
+     * @return DeviceMessageErrorCode
+     */
     public DeviceMessageErrorCode getErrorCode() {
         return errorCode;
     }
 
+    /**
+     * set errorCode.
+     *
+     * @param errorCode : DeviceMessageErrorCode
+     */
     public void setErrorCode(DeviceMessageErrorCode errorCode) {
         this.errorCode = errorCode;
     }

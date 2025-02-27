@@ -43,25 +43,55 @@ public class AbstractDeviceStatusKey {
 
     private String key;
 
+    /**
+     * Default public constructor.
+     */
     public AbstractDeviceStatusKey() {
     }
 
+    /**
+     * Initialize device status key.
+     *
+     * @param key : String
+     */
     public AbstractDeviceStatusKey(String key) {
         this.key = key;
     }
 
+    /**
+     * get value of key.
+     *
+     * @return String
+     */
     public String getKey() {
         return key;
     }
 
+    /**
+     * set value of key.
+     *
+     * @param key : String
+     */
     public void setKey(String key) {
         this.key = key;
     }
 
+    /**
+     * Convert key to device status key.
+     *
+     * @param key : String
+     *
+     * @return AbstractDeviceStatusKey
+     */
     public AbstractDeviceStatusKey convertFrom(String key) {
         return new AbstractDeviceStatusKey(key);
     }
 
+    /**
+     * Convert to string.
+     *
+     * @return String
+     */
     public String convertToString() {
         return key;
     }

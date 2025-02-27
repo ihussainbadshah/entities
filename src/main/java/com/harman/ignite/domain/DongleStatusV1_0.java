@@ -47,31 +47,77 @@ import lombok.EqualsAndHashCode;
 @EventMapping(id = EventID.DONGLE_STATUS, version = Version.V1_0)
 @EqualsAndHashCode
 public class DongleStatusV1_0 extends AlertEventData {
+    
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = 229465933650377211L;
+    
+    /**
+     * status.
+     */
     private DongleStatus status;
+    
+    /**
+     * latitude.
+     */
     private double latitude;
+    
+    /**
+     * longitude.
+     */
     private double longitude;
 
+    /**
+     * get status.
+     *
+     * @return DongleStatus
+     */
     public DongleStatus getStatus() {
         return status;
     }
 
+    /**
+     * set dongle status.
+     *
+     * @param status : DongleStatus
+     */
     public void setStatus(DongleStatus status) {
         this.status = status;
     }
 
+    /**
+     * get latitude.
+     *
+     * @return double
+     */
     public double getLatitude() {
         return latitude;
     }
 
+    /**
+     * set latitude.
+     *
+     * @param latitude : double
+     */
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
+    /**
+     * get longitude.
+     *
+     * @return double
+     */
     public double getLongitude() {
         return longitude;
     }
 
+    /**
+     * set longitude.
+     *
+     * @param longitude : double
+     */
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
@@ -87,15 +133,34 @@ public class DongleStatusV1_0 extends AlertEventData {
      */
     public enum DongleStatus {
 
+        /**
+         * ATTACHED.
+         */
         ATTACHED("attached"),
+        /**
+         * DETACHED.
+         */
         DETACHED("detached");
 
+        /**
+         * value.
+         */
         private String value;
 
+        /**
+         * Private constructor.
+         *
+         * @param value : String
+         */
         private DongleStatus(String value) {
             this.value = value;
         }
 
+        /**
+         * get value.
+         *
+         * @return String
+         */
         @JsonValue
         public String getValue() {
             return value;

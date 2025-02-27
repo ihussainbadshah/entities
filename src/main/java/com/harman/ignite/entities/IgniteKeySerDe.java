@@ -57,10 +57,22 @@ public class IgniteKeySerDe extends StdDeserializer<IgniteKey<?>> {
 
     private static final long serialVersionUID = -1675962590432629661L;
 
+    /**
+     * constructor.
+     */
     public IgniteKeySerDe() {
         super(IgniteKey.class);
     }
 
+    /**
+     * Method to deserialize.
+     *
+     * @param jp : JsonParser
+     *
+     * @param ctxt : DeserializationContext
+     *
+     * @return IgniteKey
+     */
     @Override
     public IgniteKey deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException {
 

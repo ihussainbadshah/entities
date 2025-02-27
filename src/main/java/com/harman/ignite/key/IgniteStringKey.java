@@ -47,22 +47,45 @@ import java.io.Serializable;
 @Entity
 public class IgniteStringKey implements IgniteKey<String>, Serializable {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = 4506765790446050310L;
 
+    /**
+     * key.
+     */
     private String key;
 
+    /**
+     * Default constructor.
+     */
     public IgniteStringKey() {
-
     }
 
+    /**
+     * Initialize with key.
+     *
+     * @param key : String
+     */
     public IgniteStringKey(String key) {
         this.key = key;
     }
 
+    /**
+     * get key.
+     *
+     * @return String
+     */
     public String getKey() {
         return key;
     }
 
+    /**
+     * set key.
+     *
+     * @param key : String
+     */
     public void setKey(String key) {
         this.key = key;
     }

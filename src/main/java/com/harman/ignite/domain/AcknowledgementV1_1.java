@@ -49,20 +49,45 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode
 public class AcknowledgementV1_1 extends AbstractEventData {
 
+    /**
+     * version uid.
+     */
     private static final long serialVersionUID = -6745785116371883005L;
+    
+    /**
+     * status.
+     */
     private Status status;
 
+    /**
+     * default constructor.
+     */
     public AcknowledgementV1_1() {
     }
 
+    /**
+     * Initialize with status.
+     *
+     * @param status : Status
+     */
     public AcknowledgementV1_1(Status status) {
         this.status = status;
     }
 
+    /**
+     * get status.
+     *
+     * @return Status
+     */
     public Status getStatus() {
         return status;
     }
 
+    /**
+     * set status.
+     *
+     * @param status : Status
+     */
     public void setStatus(Status status) {
         this.status = status;
     }
@@ -76,9 +101,19 @@ public class AcknowledgementV1_1 extends AbstractEventData {
      * The enum Status.
      */
     public enum Status {
+        /**
+         * Success.
+         */
         SUCCESS(Constants.SUCCESS),
+        /**
+         * Failure.
+         */
         FAILURE(Constants.FAILURE),
+        /**
+         * Custom extension.
+         */
         CUSTOM_EXTENSION(Constants.CUSTOM_EXTENSION);
+        
         private String value;
 
         Status(String value) {

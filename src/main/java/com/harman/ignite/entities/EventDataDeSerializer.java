@@ -72,8 +72,14 @@ public class EventDataDeSerializer extends StdDeserializer<EventData> {
     private static final long serialVersionUID = -7734568057530911008L;
     private static final Logger LOGGER = LoggerFactory.getLogger(EventDataDeSerializer.class);
     private static volatile Set<Class<?>> eventMappingClasses;
+    /**
+     * event data mapping.
+     */
     private Map<String, Class<?>> eventDataMapping = new HashMap<>();
 
+    /**
+     * Default constructor.
+     */
     public EventDataDeSerializer() {
         super(EventData.class);
         init();

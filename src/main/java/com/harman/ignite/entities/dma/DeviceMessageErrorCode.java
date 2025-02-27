@@ -40,12 +40,36 @@ package com.harman.ignite.entities.dma;
  * The enum Device message error code.
  */
 public enum DeviceMessageErrorCode {
+    /**
+     * RETRY_ATTEMPTS_EXCEEDED.
+     */
     RETRY_ATTEMPTS_EXCEEDED,
+    /**
+     * RETRYING_DEVICE_MESSAGE.
+     */
     RETRYING_DEVICE_MESSAGE,
+    /**
+     * SHOULDER_TAP_RETRY_ATTEMPTS_EXCEEDED.
+     */
     SHOULDER_TAP_RETRY_ATTEMPTS_EXCEEDED,
+    /**
+     * RETRYING_SHOULDER_TAP.
+     */
     RETRYING_SHOULDER_TAP,
+    /**
+     * DEVICE_DELIVERY_CUTOFF_EXCEEDED.
+     */
     DEVICE_DELIVERY_CUTOFF_EXCEEDED,
+    /**
+     * DEVICE_STATUS_INACTIVE.
+     */
     DEVICE_STATUS_INACTIVE,
+    /**
+     * MQTT_DISPATCH_FAILED.
+     */
     MQTT_DISPATCH_FAILED,
+    /**
+     * KAFKA_DISPATCH_FAILED.
+     */
     KAFKA_DISPATCH_FAILED;
 }

@@ -71,6 +71,9 @@ public class NestedDLQExceptionData implements Serializable {
      */
     private Map<String, Object> context;
 
+    /**
+     * Default constructor.
+     */
     public NestedDLQExceptionData() {
     }
 
@@ -99,42 +102,92 @@ public class NestedDLQExceptionData implements Serializable {
         this.context = context;
     }
 
+    /**
+     * This method is a getter for igniteeventblob.
+     *
+     * @return byte
+     */
     public byte[] getIgniteEventBlob() {
         return igniteEventBlob;
     }
 
+    /**
+     * This method is a setter for igniteeventblob.
+     *
+     * @param igniteEventBlob : byte
+     */
     public void setIgniteEventBlob(byte[] igniteEventBlob) {
         this.igniteEventBlob = igniteEventBlob;
     }
 
+    /**
+     * This method is a getter for iteration.
+     *
+     * @return int
+     */
     public int getIteration() {
         return iteration;
     }
 
+    /**
+     * This method is a setter for iteration.
+     *
+     * @param iteration : int
+     */
     public void setIteration(int iteration) {
         this.iteration = iteration;
     }
 
+    /**
+     * This method is a getter for processorname.
+     *
+     * @return String
+     */
     public String getProcessorName() {
         return processorName;
     }
 
+    /**
+     * This method is a setter for processorname.
+     *
+     * @param processorName : String
+     */
     public void setProcessorName(String processorName) {
         this.processorName = processorName;
     }
 
+    /**
+     * This method is a getter for exception.
+     *
+     * @return Exception
+     */
     public Exception getException() {
         return exception;
     }
 
+    /**
+     * This method is a setter for exception.
+     *
+     * @param exception : Exception
+     */
     public void setException(Exception exception) {
         this.exception = exception;
     }
 
+    /**
+     * This method is a getter for context.
+     *
+     * @return Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public Map<String, Object> getContext() {
         return context;
     }
 
+    /**
+     * This method is a setter for context.
+     *
+     * @param context : Map{@code <}String{@code >}{@code <}Object{@code >}
+     */
     public void setContext(Map<String, Object> context) {
         this.context = context;
     }

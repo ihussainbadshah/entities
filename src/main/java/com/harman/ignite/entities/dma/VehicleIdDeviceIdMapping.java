@@ -48,27 +48,55 @@ import com.harman.ignite.utils.ConcurrentHashSet;
  */
 public class VehicleIdDeviceIdMapping extends AbstractIgniteEntity {
 
+    /**
+     * default constructor.
+     */
     public VehicleIdDeviceIdMapping() {
         this.deviceIds = new ConcurrentHashSet<>();
         setSchemaVersion(Version.V1_0);
     }
 
+    /**
+     * Constructor with version.
+     *
+     * @param schemaVersion : Version
+     */
     public VehicleIdDeviceIdMapping(Version schemaVersion) {
         this.deviceIds = new ConcurrentHashSet<>();
         setSchemaVersion(schemaVersion);
     }
 
+    /**
+     * Constructor with version. and deviceIds.
+     *
+     * @param schemaVersion : Version
+     *
+     * @param deviceIds : ConcurrentHashSet{@code <}String{@code >}
+     */
     public VehicleIdDeviceIdMapping(Version schemaVersion, ConcurrentHashSet<String> deviceIds) {
         setSchemaVersion(schemaVersion);
         this.deviceIds = deviceIds;
     }
 
+    /**
+     * deviceIds.
+     */
     private ConcurrentHashSet<String> deviceIds;
 
+    /**
+     * get deviceIds.
+     *
+     * @return ConcurrentHashSet{@code <}String{@code >}
+     */
     public ConcurrentHashSet<String> getDeviceIds() {
         return deviceIds;
     }
 
+    /**
+     * set device Ids.
+     *
+     * @param deviceIds : ConcurrentHashSet{@code <}String{@code >}
+     */
     public void setDeviceIds(ConcurrentHashSet<String> deviceIds) {
         this.deviceIds = deviceIds;
     }

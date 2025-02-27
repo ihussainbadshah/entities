@@ -58,19 +58,37 @@ public class DeleteScheduleEventData extends AbstractEventData {
      */
     private String scheduleId;
 
+    /**
+     * default constructor.
+     */
     public DeleteScheduleEventData() {
         super();
     }
 
+    /**
+     * initialize with id.
+     *
+     * @param id : String
+     */
     public DeleteScheduleEventData(String id) {
         super();
         this.scheduleId = id;
     }
 
+    /**
+     * get scheduleId.
+     *
+     * @return String
+     */
     public String getScheduleId() {
         return scheduleId;
     }
 
+    /**
+     * set scheduleId.
+     *
+     * @param scheduleId : String
+     */
     public void setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
     }

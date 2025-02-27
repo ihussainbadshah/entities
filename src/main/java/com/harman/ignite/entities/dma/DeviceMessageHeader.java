@@ -72,65 +72,152 @@ public class DeviceMessageHeader {
     // below property will indicate pendingRetries has been set.
     private boolean isPendingRetriesSet;
 
+    /**
+     * default constructor.
+     */
     public DeviceMessageHeader() {
-
+        // default constructor
     }
 
+    /**
+     * set messageid.
+     *
+     * @param messageId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
 
+    /**
+     * set correlationId.
+     *
+     * @param correlationId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withCorrelationId(String correlationId) {
         this.correlationId = correlationId;
         return this;
     }
 
+    /**
+     * set requestId.
+     *
+     * @param requestId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
 
+    /**
+     * set vehicleId.
+     *
+     * @param vehicleId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
 
+    /**
+     * set targetDeviceId.
+     *
+     * @param targetDeviceId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withTargetDeviceId(String targetDeviceId) {
         this.targetDeviceId = targetDeviceId;
         return this;
     }
 
+    /**
+     * set deviceRoutable flag.
+     *
+     * @param deviceRoutable : boolean
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withDeviceRoutable(boolean deviceRoutable) {
         this.deviceRoutable = deviceRoutable;
         return this;
     }
 
+    /**
+     * set responseExpected flag.
+     *
+     * @param responseExpected : boolean
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withResponseExpected(boolean responseExpected) {
         this.responseExpected = responseExpected;
         return this;
     }
 
+    /**
+     * set shoulderTapEnabled flag.
+     *
+     * @param shoulderTapEnabled : boolean
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withShoulderTapEnabled(boolean shoulderTapEnabled) {
         this.shoulderTapEnabled = shoulderTapEnabled;
         return this;
     }
 
+    /**
+     * set deviceDeliveryCutoff.
+     *
+     * @param deviceDeliveryCutoff : long
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withDeviceDeliveryCutoff(long deviceDeliveryCutoff) {
         this.deviceDeliveryCutoff = deviceDeliveryCutoff;
         return this;
     }
 
+    /**
+     * set timestamp.
+     *
+     * @param timestamp : long
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withTimestamp(long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
 
+    /**
+     * set devMsgTopicSuffix.
+     *
+     * @param devMsgTopicSuffix : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withDevMsgTopicSuffix(String devMsgTopicSuffix) {
         this.devMsgTopicSuffix = devMsgTopicSuffix;
         return this;
     }
 
+    /**
+     * set devMsgTopicPrefix.
+     *
+     * @param devMsgTopicPrefix : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withDevMsgTopicPrefix(String devMsgTopicPrefix) {
         this.devMsgTopicPrefix = devMsgTopicPrefix;
         return this;
@@ -151,94 +238,212 @@ public class DeviceMessageHeader {
         return this;
     }
 
+    /**
+     * set pendingRetries.
+     *
+     * @param pendingRetries : int
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withPendingRetries(int pendingRetries) {
         this.pendingRetries = pendingRetries;
         return this;
     }
 
+    /**
+     * set platformId.
+     *
+     * @param platformId : String
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withPlatformId(String platformId) {
         this.platformId = platformId;
         return this;
     }
 
+    /**
+     * set timezone.
+     *
+     * @param timezone : short
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader withTimezone(short timezone) {
         this.timezone = timezone;
         return this;
     }
 
+    /**
+     * set isPendingRetriesSet flag.
+     *
+     * @param isPendingRetriesSet : boolean
+     *
+     * @return DeviceMessageHeader
+     */
     public DeviceMessageHeader isPendingRetriesSet(boolean isPendingRetriesSet) {
         this.isPendingRetriesSet = isPendingRetriesSet;
         return this;
     }
 
+    /**
+     * get pendingRetries.
+     *
+     * @return int
+     */
     public int getPendingRetries() {
         return this.pendingRetries;
     }
 
+    /**
+     * get isPendingRetriesSet.
+     *
+     * @return boolean
+     */
     public boolean getIsPendingRetriesSet() {
         return this.isPendingRetriesSet;
     }
 
+    /**
+     * get messageId.
+     *
+     * @return String
+     */
     public String getMessageId() {
         return messageId;
     }
 
+    /**
+     * get correlationId.
+     *
+     * @return String
+     */
     public String getCorrelationId() {
         return correlationId;
     }
 
+    /**
+     * get requestId.
+     *
+     * @return String
+     */
     public String getRequestId() {
         return requestId;
     }
 
+    /**
+     * get vehicleId.
+     *
+     * @return String
+     */
     public String getVehicleId() {
         return vehicleId;
     }
 
+    /**
+     * get targetDeviceId.
+     *
+     * @return String
+     */
     public String getTargetDeviceId() {
         return targetDeviceId;
     }
 
+    /**
+     * get deviceRoutable.
+     *
+     * @return boolean
+     */
     public boolean isDeviceRoutable() {
         return deviceRoutable;
     }
 
+    /**
+     * get responseExpected.
+     *
+     * @return boolean
+     */
     public boolean isResponseExpected() {
         return responseExpected;
     }
 
+    /**
+     * get shoulderTapEnabled.
+     *
+     * @return boolean
+     */
     public boolean isShoulderTapEnabled() {
         return shoulderTapEnabled;
     }
 
+    /**
+     * get deviceDeliveryCutoff.
+     *
+     * @return long
+     */
     public long getDeviceDeliveryCutoff() {
         return deviceDeliveryCutoff;
     }
 
+    /**
+     * get timestamp.
+     *
+     * @return long
+     */
     public long getTimestamp() {
         return timestamp;
     }
 
+    /**
+     * get devMsgTopicSuffix.
+     *
+     * @return String
+     */
     public String getDevMsgTopicSuffix() {
         return devMsgTopicSuffix;
     }
 
+    /**
+     * get devMsgTopicPrefix.
+     *
+     * @return String
+     */
     public String getDevMsgTopicPrefix() {
         return devMsgTopicPrefix;
     }
 
+    /**
+     * get devMsgGlobalTopic.
+     *
+     * @return String
+     */
     public String getDevMsgGlobalTopic() {
         return devMsgGlobalTopic;
     }
 
+    /**
+     * get globalTopicNameProvided.
+     *
+     * @return boolean
+     */
     public boolean isGlobalTopicNameProvided() {
         return globalTopicNameProvided;
     }
 
+    /**
+     * get platformId.
+     *
+     * @return String
+     */
     public String getPlatformId() {
         return platformId;
     }
 
+    /**
+     * get timezone.
+     *
+     * @return short
+     */
     public short getTimezone() {
         return timezone;
     }

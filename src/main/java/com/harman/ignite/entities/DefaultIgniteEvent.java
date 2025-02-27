@@ -43,10 +43,21 @@ import com.harman.ignite.domain.BlobDataV1_0;
  */
 public class DefaultIgniteEvent extends IgniteEventImpl {
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -8453647847172837817L;
 
+    /**
+     * default value.
+     */
     private static final String DEFAULT = "DEFAULT";
 
+    /**
+     * Constructor.
+     *
+     * @param value : byte[]
+     */
     public DefaultIgniteEvent(byte[] value) {
         init(value);
     }

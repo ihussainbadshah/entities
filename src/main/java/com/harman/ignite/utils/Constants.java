@@ -42,37 +42,95 @@ import com.harman.ignite.domain.Version;
  * Constants.
  */
 public class Constants {
+    
     private Constants() {
     }
 
+    /**
+     * Hypen.
+     */
     public static final String HYPHEN = "-";
 
+    /**
+     * Success.
+     */
     public static final String SUCCESS = "SUCCESS";
+    
+    /**
+     * Failure.
+     */
     public static final String FAILURE = "FAILURE";
+    
+    /**
+     * Fail.
+     */
     public static final String FAIL = "FAIL";
+    
+    /**
+     * Custom extension.
+     */
     public static final String CUSTOM_EXTENSION = "CUSTOM_EXTENSION";
+    
+    /**
+     * Validation message.
+     */
     public static final String VALIDATION_MESSAGE = "received either null or empty";
+    
+    /**
+     * event data.
+     */
     public static final String GENERIC_EVT_DATA_VALUE = "com.harman.ignite.entities.GenericEventData";
 
+    /**
+     * default ttl.
+     */
     public static final long DEFAULT_DELIVERY_CUTOFF = -1L;
 
+    /**
+     * default version.
+     */
     public static final String DEFAULT_VERSION = Version.V1_0.getValue();
-
-    // PIIConfig Types
+    
+    /**
+     * vin.
+     */
     public static final String VIN = "vin";
 
+    /**
+     * error.
+     */
     public static final String DESERIALIZATION_LARGE_EVENT_ERROR = "Unexpected error during "
             + "deserialization of event's json string having length larger than 32kb";
 
+    /**
+     * error.
+     */
     public static final String DESERIALIZATION_EVENT_ERROR = "Unexpected error during"
             + " deserialization of event's json string ";
 
+    /**
+     * string reader.
+     */
     public static final String STRING_READER_FIELD_STR = "str";
 
+    /**
+     * credential constant.
+     */
     public static final String CLIENT_CREDENTIALS = "client_credentials";
+    
+    /**
+     * owner.
+     */
     public static final String RESOURCE_OWNER_PSWRD_CREDENTIALS = "password";
 
+    /**
+     * comma.
+     */
     public static final String COMMA = ",";
+    
+    /**
+     * astrix.
+     */
     public static final String ASTRIX = "*";
 
 }

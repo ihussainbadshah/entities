@@ -47,31 +47,76 @@ import java.util.Arrays;
 public abstract class AbstractBlobEventData extends AbstractEventData {
 
 
+    /**
+     * uid.
+     */
     private static final long serialVersionUID = -3736798123313255985L;
+    
+    /**
+     * encoding.
+     */
     private Encoding encoding;
+    
+    /**
+     * eventSource.
+     */
     private String eventSource;
+    
+    /**
+     * payload.
+     */
     private byte[] payload;
 
+    /**
+     * Get the type of encoding.
+     *
+     * @return Encoding
+     */
     public Encoding getEncoding() {
         return encoding;
     }
 
+    /**
+     * Set the type of encoding.
+     *
+     * @param encoding : Encoding
+     */
     public void setEncoding(Encoding encoding) {
         this.encoding = encoding;
     }
 
+    /**
+     * Get the event source.
+     *
+     * @return String
+     */
     public String getEventSource() {
         return eventSource;
     }
 
+    /**
+     * Set the event source.
+     *
+     * @param eventSource : String
+     */
     public void setEventSource(String eventSource) {
         this.eventSource = eventSource;
     }
 
+    /**
+     * Get the payload.
+     *
+     * @return byte[]
+     */
     public byte[] getPayload() {
         return payload;
     }
 
+    /**
+     * Set the payload.
+     *
+     * @param payload : byte[]
+     */
     public void setPayload(byte[] payload) {
         this.payload = payload;
     }
@@ -84,14 +129,25 @@ public abstract class AbstractBlobEventData extends AbstractEventData {
     }
 
     /**
-     * The enum Encoding.
+     * Encoding that can be used.
      */
     public enum Encoding {
+        /**
+         * GPB.
+         */
         GPB("gpb"),
+        /**
+         * JSON.
+         */
         JSON("json");
 
         private String encode;
 
+        /**
+         * Get the type encoding.
+         *
+         * @return String
+         */
         public String getEncode() {
             return encode;
         }

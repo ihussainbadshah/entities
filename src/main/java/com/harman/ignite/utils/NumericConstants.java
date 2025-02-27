@@ -43,24 +43,100 @@ public class NumericConstants {
     private NumericConstants() {
     }
 
+
+    /**
+     * THREE.
+     */
     public static final int THREE = 3;
+
+    /**
+     * TEN.
+     */
     public static final int TEN = 10;
+
+    /**
+     * TWELVE.
+     */
     public static final int TWELVE = 12;
+
+    /**
+     * TWENTY.
+     */
     public static final int TWENTY = 20;
+
+    /**
+     * THIRTY.
+     */
     public static final int THIRTY = 30;
+
+    /**
+     * FORTY.
+     */
     public static final int FORTY = 40;
+
+    /**
+     * FIFTY.
+     */
     public static final int FIFTY = 50;
+
+    /**
+     * FIVE.
+     */
     public static final int FIVE = 5;
+
+    /**
+     * FOUR.
+     */
     public static final int FOUR = 4;
+
+    /**
+     * TWO.
+     */
     public static final int TWO = 2;
+
+    /**
+     * ELEVEN.
+     */
     public static final int ELEVEN = 11;
+
+    /**
+     * TWENTY_TWO.
+     */
     public static final int TWENTY_TWO = 22;
+
+    /**
+     * THIRTY_THREE.
+     */
     public static final int THIRTY_THREE = 33;
+
+    /**
+     * FORTY_FOUR.
+     */
     public static final int FORTY_FOUR = 44;
+
+    /**
+     * FIFTY_FIVE.
+     */
     public static final int FIFTY_FIVE = 55;
+
+    /**
+     * VALUE.
+     */
     public static final int VALUE = 100;
+
+    /**
+     * EVENT_LEVEL_ENTRY_INTERVAL.
+     */
     public static final long EVENT_LEVEL_ENTRY_INTERVAL = 60000L;
+
+    /**
+     * EVENT_LEVEL_ENTRY.
+     */
     public static final long EVENT_LEVEL_ENTRY = 6000L;
+
+    /**
+     * TIME_STAMP.
+     */
     public static final long TIME_STAMP = 1234L;
 
 

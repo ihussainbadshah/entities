@@ -41,8 +41,14 @@ package com.harman.ignite.entities.dma;
  */
 public class DeviceMessageDispatchers {
 
+    /**
+     * private constructor.
+     */
     private DeviceMessageDispatchers() {
     }
 
+    /**
+     * kafka string representation.
+     */
     public static final String KAFKA = "kafka";
 }

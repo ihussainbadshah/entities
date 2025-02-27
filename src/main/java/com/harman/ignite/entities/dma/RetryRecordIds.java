@@ -49,24 +49,49 @@ public class RetryRecordIds extends AbstractIgniteEntity {
 
     private ConcurrentHashSet<String> recordIds;
 
+    /**
+     * Default constructor.
+     */
     public RetryRecordIds() {
         this.recordIds = new ConcurrentHashSet<>();
     }
 
+    /**
+     * Initialize with schemaVersion.
+     *
+     * @param schemaVersion : Version
+     */
     public RetryRecordIds(Version schemaVersion) {
         this.recordIds = new ConcurrentHashSet<>();
         setSchemaVersion(schemaVersion);
     }
 
+    /**
+     * Initialize with schemaVersion and recordIds.
+     *
+     * @param schemaVersion : Version
+     *
+     * @param recordIds : ConcurrentHashSet{@code <}String{@code >}
+     */
     public RetryRecordIds(Version schemaVersion, ConcurrentHashSet<String> recordIds) {
         setSchemaVersion(schemaVersion);
         this.recordIds = recordIds;
     }
 
+    /**
+     * get recordIds.
+     *
+     * @return ConcurrentHashSet{@code <}String{@code >}
+     */
     public ConcurrentHashSet<String> getRecordIds() {
         return recordIds;
     }
 
+    /**
+     * set record Ids.
+     *
+     * @param recordIds : ConcurrentHashSet{@code <}String{@code >}
+     */
     public void setRecordIds(ConcurrentHashSet<String> recordIds) {
         this.recordIds = recordIds;
     }
