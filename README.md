@@ -223,10 +223,10 @@ It also maintains the metadata about how many times the retry has already been a
 Example:
 
 ```java
-    import com.harman.ignite.entities.dma.DeviceMessage;
-    import com.harman.ignite.entities.dma.RetryRecord;
-    import com.harman.ignite.key.IgniteStringKey;
-    
+    import org.eclipse.ecsp.entities.dma.DeviceMessage;
+    import org.eclipse.ecsp.entities.dma.RetryRecord;
+    import org.eclipse.ecsp.key.IgniteStringKey;
+
     class Test {
         IgniteKey igniteKey = new IgniteStringKey();
         RetryRecord retryRecord = new RetryRecord(new IgniteStringKey("test"), new DeviceMessage(), 100);
