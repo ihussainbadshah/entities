@@ -181,7 +181,8 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     /**
      * This field, will store the kafka headers for current input record.
      */
-    @JsonIgnore
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty(value = EventAttribute.KAFKA_HEADERS)
     private transient Map<String, String> kafkaHeaders;
 
     /**
