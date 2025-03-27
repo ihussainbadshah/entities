@@ -183,7 +183,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.KAFKA_HEADERS)
-    private transient Map<String, String> kafkaHeaders;
+    private Map<String, String> kafkaHeaders;
 
     /**
      * platformId.
