@@ -174,5 +174,10 @@ public class EventAttribute {
      * PlatformId.
      */
     public static final String PLATFORM_ID = "PlatformId";
+    
+    /**
+     * KafkaHeaders.
+     */
+    public static final String KAFKA_HEADERS = "KafkaHeaders";
 
 }
