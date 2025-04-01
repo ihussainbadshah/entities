@@ -79,7 +79,7 @@ public class Constants {
     /**
      * event data.
      */
-    public static final String GENERIC_EVT_DATA_VALUE = "entities.org.eclipse.ecsp.GenericEventData";
+    public static final String GENERIC_EVT_DATA_VALUE = "org.eclipse.ecsp.entities.GenericEventData";
 
     /**
      * default ttl.
