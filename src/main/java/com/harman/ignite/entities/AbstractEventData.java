@@ -49,7 +49,7 @@ import java.util.Optional;
  * @deprecated This class is deprecated and will be removed in future releases.
  *     It is present only for backward compatibility with older versions of the system
  *     and should not be used in new implementations.
- *     Use {@link org.eclipse.ignite.entities.AbstractEventData} instead.
+ *     Use {@link org.eclipse.ecsp.entities.AbstractEventData} instead.
  *
  */
 @Deprecated(

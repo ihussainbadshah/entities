@@ -48,7 +48,7 @@ import org.eclipse.ecsp.domain.Version;
  * @deprecated This class is deprecated and will be removed in future releases.
  *     It is present only for backward compatibility with older versions of the system
  *     and should not be used in new implementations.
- *     Use {@link org.eclipse.ignite.domain.DeviceConnStatusV1_0} instead.
+ *     Use {@link org.eclipse.ecsp.domain.DeviceConnStatusV1_0} instead.
  */
 @Deprecated(
     since = "1.1.2",

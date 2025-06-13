@@ -47,7 +47,7 @@ import org.eclipse.ecsp.domain.EventAttribute;
  * @deprecated This class is deprecated and will be removed in future releases.
  *     It is present only for backward compatibility with older versions of the system
  *     and should not be used in new implementations.
- *     Use {@link org.eclipse.ignite.entities.IgniteDeviceAwareBlobEvent} instead.
+ *     Use {@link org.eclipse.ecsp.entities.IgniteDeviceAwareBlobEvent} instead.
  */
 @Deprecated(
     since = "1.1.2",

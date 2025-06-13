@@ -47,13 +47,13 @@ import org.eclipse.ecsp.domain.Version;
  * to serialize the incoming events from device. And any changes to this
  * interface requires recompilation and re-release of HiveMQ. Any attributes
  * that are not relevant to HiveMQ's role in data ingestion and publish to Kafka
- * should be added in {@link IgniteEvent} class.
+ * should be added in {@link org.eclipse.ecsp.entities.IgniteEvent} class.
  * </p>
  *
  * @deprecated This class is deprecated and will be removed in future releases.
  *     It is present only for backward compatibility with older versions of the system
  *     and should not be used in new implementations.
- *     Use {@link org.eclipse.ignite.entities.IgniteEventBase} instead.
+ *     Use {@link org.eclipse.ecsp.entities.IgniteEventBase} instead.
  */
 @Deprecated(
     since = "1.1.2",
