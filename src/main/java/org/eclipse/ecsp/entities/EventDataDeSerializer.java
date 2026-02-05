@@ -72,7 +72,6 @@ import java.util.Set;
 public class EventDataDeSerializer extends StdDeserializer<EventData> {
     private static final long serialVersionUID = -7734568057530911008L;
     private static final Logger LOGGER = LoggerFactory.getLogger(EventDataDeSerializer.class);
-    private static final int BUFFER_SIZE = 8192;
     private static volatile Set<Class<?>> eventMappingClasses;
     /**
      * event data mapping.
