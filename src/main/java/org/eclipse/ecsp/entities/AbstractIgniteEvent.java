@@ -193,6 +193,13 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
     private String platformId;
 
     /**
+     * qosLevel.
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty(value = EventAttribute.QOS_LEVEL)
+    private Integer qosLevel;
+
+    /**
      * get value for timezone.
      *
      * @return short
@@ -594,6 +601,25 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
         this.kafkaHeaders = kafkaHeaders;
     }
 
+    /**
+     * get QoS level.
+     *
+     * @return Integer
+     */
+    @Override
+    public Integer getQosLevel() {
+        return this.qosLevel;
+    }
+
+    /**
+     * set QoS level.
+     *
+     * @param qosLevel : Integer
+     */
+    public void setQosLevel(Integer qosLevel) {
+        this.qosLevel = qosLevel;
+    }
+
     @Override
     public String toString() {
         return "AbstractIgniteEvent [timezone=" + timezone + ", dffQualifier=" + dffQualifier
@@ -607,7 +633,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
                 + ", version=" + version + ", timestamp=" + timestamp + ", eventData=" + eventData
                 + ", requestId=" + requestId
                 + ", sourceDeviceId=" + sourceDeviceId + ", vehicleId=" + vehicleId
-                + ", kafkaHeaders=" + kafkaHeaders + "]";
+                + ", kafkaHeaders=" + kafkaHeaders + ", qosLevel=" + qosLevel + "]";
     }
 
 }

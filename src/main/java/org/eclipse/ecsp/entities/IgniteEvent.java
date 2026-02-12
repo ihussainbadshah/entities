@@ -192,4 +192,11 @@ public interface IgniteEvent extends IgniteEventBase {
      */
     public String getPlatformId();
 
+    /**
+     * get QoS level.
+     *
+     * @return Integer
+     */
+    public Integer getQosLevel();
+
 }
