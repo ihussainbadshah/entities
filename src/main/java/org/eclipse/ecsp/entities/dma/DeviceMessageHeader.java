@@ -61,6 +61,7 @@ public class DeviceMessageHeader {
     private long timestamp;
     private String platformId;
     private short timezone;
+    private Integer qosLevel;
 
     /*
      * RTC 285555 DMA should store the retry attempt in offline buffer. So as
@@ -275,6 +276,18 @@ public class DeviceMessageHeader {
     }
 
     /**
+     * set qosLevel.
+     *
+     * @param qosLevel : Integer
+     *
+     * @return DeviceMessageHeader
+     */
+    public DeviceMessageHeader withQosLevel(Integer qosLevel) {
+        this.qosLevel = qosLevel;
+        return this;
+    }
+
+    /**
      * set isPendingRetriesSet flag.
      *
      * @param isPendingRetriesSet : boolean
@@ -448,6 +461,15 @@ public class DeviceMessageHeader {
         return timezone;
     }
 
+    /**
+     * get qosLevel.
+     *
+     * @return Integer
+     */
+    public Integer getQosLevel() {
+        return qosLevel;
+    }
+
     @Override
     public String toString() {
         return "DeviceMessageHeader [messageId=" + messageId
@@ -457,7 +479,7 @@ public class DeviceMessageHeader {
                 + ", responseExpected=" + responseExpected + ", shoulderTapEnabled="
                 + shoulderTapEnabled + ", deviceDeliveryCutoff=" + deviceDeliveryCutoff
                 + ", timestamp=" + timestamp
-                + ", timezone=" + timezone
+                + ", timezone=" + timezone + ", qosLevel=" + qosLevel
                 + ", devMsgTopicSuffix=" + devMsgTopicSuffix
                 + ", devMsgTopicPrefix=" + devMsgTopicPrefix + ", devMsgGlobalTopic="
                 + devMsgGlobalTopic + "]";
