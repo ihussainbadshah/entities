@@ -38,6 +38,7 @@ package org.eclipse.ecsp.entities.dma;
 
 import dev.morphia.annotations.Entity;
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.ecsp.enums.QosLevel;
 
 /**
  * Device message header.
@@ -61,7 +62,7 @@ public class DeviceMessageHeader {
     private long timestamp;
     private String platformId;
     private short timezone;
-    private Integer qosLevel;
+    private QosLevel qosLevel;
 
     /*
      * RTC 285555 DMA should store the retry attempt in offline buffer. So as
@@ -282,7 +283,7 @@ public class DeviceMessageHeader {
      *
      * @return DeviceMessageHeader
      */
-    public DeviceMessageHeader withQosLevel(Integer qosLevel) {
+    public DeviceMessageHeader withQosLevel(QosLevel qosLevel) {
         this.qosLevel = qosLevel;
         return this;
     }
@@ -464,9 +465,9 @@ public class DeviceMessageHeader {
     /**
      * get qosLevel.
      *
-     * @return Integer
+     * @return QosLevel
      */
-    public Integer getQosLevel() {
+    public QosLevel getQosLevel() {
         return qosLevel;
     }
 

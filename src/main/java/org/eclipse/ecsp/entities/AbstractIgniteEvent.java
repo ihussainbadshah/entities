@@ -42,6 +42,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.eclipse.ecsp.domain.EventAttribute;
+import org.eclipse.ecsp.enums.QosLevel;
 import org.eclipse.ecsp.utils.Constants;
 
 import java.io.Serializable;
@@ -197,7 +198,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(value = EventAttribute.QOS_LEVEL)
-    private Integer qosLevel;
+    private QosLevel qosLevel;
 
     /**
      * get value for timezone.
@@ -607,7 +608,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
      * @return Integer
      */
     @Override
-    public Integer getQosLevel() {
+    public QosLevel getQosLevel() {
         return this.qosLevel;
     }
 
@@ -616,7 +617,7 @@ public abstract class AbstractIgniteEvent extends AbstractIgniteEventBase implem
      *
      * @param qosLevel : Integer
      */
-    public void setQosLevel(Integer qosLevel) {
+    public void setQosLevel(QosLevel qosLevel) {
         this.qosLevel = qosLevel;
     }
 

@@ -36,6 +36,8 @@
 
 package org.eclipse.ecsp.entities;
 
+import org.eclipse.ecsp.enums.QosLevel;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -195,8 +197,8 @@ public interface IgniteEvent extends IgniteEventBase {
     /**
      * get QoS level.
      *
-     * @return Integer
+     * @return QosLevel
      */
-    public Integer getQosLevel();
+    public QosLevel getQosLevel();
 
 }

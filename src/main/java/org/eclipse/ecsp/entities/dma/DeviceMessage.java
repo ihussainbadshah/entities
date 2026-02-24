@@ -178,9 +178,7 @@ public class DeviceMessage extends AbstractIgniteEntity {
             deviceMessageHeader.withDevMsgTopicPrefix(devMsgTopicPrefix.get());
         }
         deviceMessageHeader.withTargetDeviceId(event.getTargetDeviceId().orElse(event.getSourceDeviceId()));
-        if (Objects.nonNull(event.getQosLevel())) {
-            deviceMessageHeader.withQosLevel(event.getQosLevel());
-        }
+        deviceMessageHeader.withQosLevel(event.getQosLevel());
     }
 
     /**
