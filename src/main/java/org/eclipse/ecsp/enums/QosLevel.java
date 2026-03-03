@@ -34,46 +34,25 @@
  *  *******************************************************************************
  */
 
-package org.eclipse.ecsp.entities.dma;
+package org.eclipse.ecsp.enums;
 
 /**
- * The enum Device message error code.
+ * Enum representing the Quality of Service (QoS) levels for message delivery.
+ *
+ * @author dsharma5
  */
-public enum DeviceMessageErrorCode {
-    /**
-     * RETRY_ATTEMPTS_EXCEEDED.
-     */
-    RETRY_ATTEMPTS_EXCEEDED,
-    /**
-     * RETRYING_DEVICE_MESSAGE.
-     */
-    RETRYING_DEVICE_MESSAGE,
-    /**
-     * SHOULDER_TAP_RETRY_ATTEMPTS_EXCEEDED.
-     */
-    SHOULDER_TAP_RETRY_ATTEMPTS_EXCEEDED,
-    /**
-     * RETRYING_SHOULDER_TAP.
-     */
-    RETRYING_SHOULDER_TAP,
-    /**
-     * DEVICE_DELIVERY_CUTOFF_EXCEEDED.
-     */
-    DEVICE_DELIVERY_CUTOFF_EXCEEDED,
-    /**
-     * DEVICE_STATUS_INACTIVE.
-     */
-    DEVICE_STATUS_INACTIVE,
-    /**
-     * MQTT_DISPATCH_FAILED.
-     */
-    MQTT_DISPATCH_FAILED,
-    /**
-     * KAFKA_DISPATCH_FAILED.
-     */
-    KAFKA_DISPATCH_FAILED,
-    /**
-     * PUB_ACK_NOT_RECEIVED.
-     */
-    PUB_ACK_NOT_RECEIVED;
+public enum QosLevel {
+    AT_MOST_ONCE(0),
+    AT_LEAST_ONCE(1),
+    EXACTLY_ONCE(2);
+
+    private final int value;
+
+    QosLevel(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
